@@ -312,8 +312,8 @@ G1_CFG = ArticulationCfg(
                 ".*_hip_pitch_joint",
                 "torso_joint",
             ],
-            effort_limit=300,
-            velocity_limit=100.0,
+            effort_limit=88,
+            velocity_limit=32.0,
             stiffness={
                 ".*_hip_yaw_joint": 150.0,
                 ".*_hip_roll_joint": 150.0,
@@ -335,8 +335,8 @@ G1_CFG = ArticulationCfg(
             joint_names_expr=[
                 ".*_knee_joint",
             ],
-            effort_limit=300,
-            velocity_limit=100.0,
+            effort_limit=139,
+            velocity_limit=20.0,
             stiffness={
                 ".*_knee_joint": 200.0,
             },
@@ -349,7 +349,8 @@ G1_CFG = ArticulationCfg(
         ),
 
         "feet": ImplicitActuatorCfg(
-            effort_limit=20,
+            effort_limit=40,
+            velocity_limit=53.0,
             joint_names_expr=[".*_ankle_pitch_joint", ".*_ankle_roll_joint"],
             stiffness=20.0,
             damping=2.0,
@@ -362,6 +363,18 @@ G1_CFG = ArticulationCfg(
                 ".*_shoulder_yaw_joint",
                 ".*_elbow_pitch_joint",
                 ".*_elbow_roll_joint",
+            ],
+            effort_limit=21,
+            velocity_limit=53.0,
+            stiffness=40.0,
+            damping=10.0,
+            armature={
+                ".*_shoulder_.*": 0.01,
+                ".*_elbow_.*": 0.01,
+            },
+        ),
+        "hand": ImplicitActuatorCfg(
+            joint_names_expr=[
                 ".*_five_joint",
                 ".*_three_joint",
                 ".*_six_joint",
@@ -370,13 +383,11 @@ G1_CFG = ArticulationCfg(
                 ".*_one_joint",
                 ".*_two_joint",
             ],
-            effort_limit=300,
-            velocity_limit=100.0,
+            effort_limit=0.7,
+            velocity_limit=23.0,
             stiffness=40.0,
             damping=10.0,
             armature={
-                ".*_shoulder_.*": 0.01,
-                ".*_elbow_.*": 0.01,
                 ".*_five_joint": 0.001,
                 ".*_three_joint": 0.001,
                 ".*_six_joint": 0.001,
