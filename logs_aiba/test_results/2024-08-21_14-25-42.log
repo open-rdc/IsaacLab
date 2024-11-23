@@ -1,0 +1,2516 @@
+
+============================================================
+
+The following 52 tests were found:
+01: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/app/test_argparser_launch.py, timeout: 120
+02: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/app/test_env_var_launch.py, timeout: 120
+03: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/app/test_kwarg_launch.py, timeout: 120
+04: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/assets/test_articulation.py, timeout: 120
+05: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/assets/test_rigid_object.py, timeout: 120
+06: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/controllers/test_differential_ik.py, timeout: 120
+07: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/deps/test_scipy.py, timeout: 120
+08: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/deps/test_torch.py, timeout: 120
+09: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/envs/test_env_rendering_logic.py, timeout: 200
+10: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/envs/test_manager_based_env.py, timeout: 120
+11: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/envs/test_null_command_term.py, timeout: 120
+12: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/managers/test_observation_manager.py, timeout: 120
+13: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/managers/test_reward_manager.py, timeout: 120
+14: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/markers/test_visualization_markers.py, timeout: 120
+15: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/performance/test_kit_startup_performance.py, timeout: 120
+16: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/performance/test_robot_load_performance.py, timeout: 120
+17: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/scene/test_interactive_scene.py, timeout: 120
+18: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sensors/test_camera.py, timeout: 120
+19: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sensors/test_contact_sensor.py, timeout: 120
+20: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sensors/test_frame_transformer.py, timeout: 120
+21: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sensors/test_ray_caster_camera.py, timeout: 120
+22: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sensors/test_tiled_camera.py, timeout: 120
+23: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_build_simulation_context_headless.py, timeout: 120
+24: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_build_simulation_context_nonheadless.py, timeout: 120
+25: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_mesh_converter.py, timeout: 120
+26: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_schemas.py, timeout: 120
+27: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_simulation_context.py, timeout: 120
+28: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_spawn_from_files.py, timeout: 120
+29: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_spawn_lights.py, timeout: 120
+30: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_spawn_materials.py, timeout: 120
+31: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_spawn_meshes.py, timeout: 120
+32: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_spawn_sensors.py, timeout: 120
+33: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_spawn_shapes.py, timeout: 120
+34: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_urdf_converter.py, timeout: 120
+35: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_utils.py, timeout: 120
+36: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/terrains/test_terrain_importer.py, timeout: 120
+37: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/utils/test_assets.py, timeout: 120
+38: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/utils/test_circular_buffer.py, timeout: 120
+39: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/utils/test_configclass.py, timeout: 120
+40: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/utils/test_delay_buffer.py, timeout: 120
+41: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/utils/test_dict.py, timeout: 120
+42: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/utils/test_math.py, timeout: 120
+43: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/utils/test_string.py, timeout: 120
+44: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/utils/test_timer.py, timeout: 120
+45: /workspace/isaaclab/source/extensions/omni.isaac.lab_assets/test/test_valid_configs.py, timeout: 120
+46: /workspace/isaaclab/source/extensions/omni.isaac.lab_tasks/test/test_data_collector.py, timeout: 120
+47: /workspace/isaaclab/source/extensions/omni.isaac.lab_tasks/test/test_environments.py, timeout: 1200
+48: /workspace/isaaclab/source/extensions/omni.isaac.lab_tasks/test/test_record_video.py, timeout: 120
+49: /workspace/isaaclab/source/extensions/omni.isaac.lab_tasks/test/wrappers/test_rl_games_wrapper.py, timeout: 120
+50: /workspace/isaaclab/source/extensions/omni.isaac.lab_tasks/test/wrappers/test_rsl_rl_wrapper.py, timeout: 200
+51: /workspace/isaaclab/source/extensions/omni.isaac.lab_tasks/test/wrappers/test_sb3_wrapper.py, timeout: 200
+52: /workspace/isaaclab/source/extensions/omni.isaac.lab_tasks/test/wrappers/test_skrl_wrapper.py, timeout: 200
+
+============================================================
+
+The following 7 tests are marked to be skipped:
+01: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/app/test_argparser_launch.py
+02: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/app/test_env_var_launch.py
+03: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/app/test_kwarg_launch.py
+04: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/controllers/test_differential_ik.py
+05: /workspace/isaaclab/source/extensions/omni.isaac.lab/test/sim/test_build_simulation_context_nonheadless.py
+06: /workspace/isaaclab/source/extensions/omni.isaac.lab_tasks/test/test_data_collector.py
+07: /workspace/isaaclab/source/extensions/omni.isaac.lab_tasks/test/test_record_video.py
+
+============================================================
+
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/assets/test_articulation.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142542.log
+2024-08-21 14:25:42 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.034s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.310s] [ext: omni.stats-1.0.1] startup
+[0.311s] [ext: omni.client-1.1.0] startup
+[0.332s] [ext: omni.assets.plugins-0.0.0] startup
+[0.333s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.340s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.355s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59574
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:25:43 [760ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.883s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.884s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.884s] [ext: omni.pip.compute-1.4.0] startup
+[0.885s] [ext: omni.pip.cloud-1.1.3] startup
+[0.888s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.888s] [ext: omni.mtlx-0.1.0] startup
+[0.888s] [ext: omni.usd.config-1.0.4] startup
+[0.891s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.891s] [ext: omni.usd.libs-1.0.1] startup
+[0.962s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.963s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.978s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.979s] [ext: omni.appwindow-1.1.8] startup
+[0.981s] [ext: omni.kit.renderer.core-1.0.1] startup
+[1.017s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[1.019s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.163s] [ext: omni.ui-2.23.11] startup
+[1.173s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.174s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.250s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.252s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.258s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.289s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.289s] [ext: omni.graph.exec-0.9.3] startup
+[1.290s] [ext: omni.usd_resolver-1.0.0] startup
+[1.293s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.294s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.295s] [ext: omni.usd.core-1.2.11] startup
+[1.298s] [ext: omni.kit.commands-1.4.9] startup
+[1.300s] [ext: omni.activity.core-1.0.1] startup
+[1.302s] [ext: omni.timeline-1.0.10] startup
+[1.303s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.308s] [ext: omni.kvdb-106.0.20] startup
+[1.309s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.310s] [ext: omni.localcache-106.0.20] startup
+[1.311s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.314s] [ext: omni.usdphysics-106.0.20] startup
+[1.316s] [ext: omni.physx.foundation-106.0.20] startup
+[1.317s] [ext: carb.audio-0.1.0] startup
+[1.318s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.353s] [ext: omni.physx.cooking-106.0.20] startup
+[1.359s] [ext: omni.datastore-0.0.0] startup
+[1.359s] [ext: omni.blobkey-1.1.0] startup
+[1.360s] [ext: omni.ujitso.default-1.0.0] startup
+[1.361s] [ext: omni.hsscclient-0.0.0] startup
+[1.363s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.364s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.380s] [ext: omni.physx-106.0.20] startup
+[1.393s] [ext: omni.usd-1.11.2] startup
+[1.421s] [ext: omni.physics.tensors-106.0.20] startup
+[1.507s] [ext: omni.physx.tensors-106.0.20] startup
+[1.511s] [ext: omni.physx.fabric-106.0.20] startup
+[1.516s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.537s] [ext: omni.isaac.version-1.1.0] startup
+[1.538s] [ext: omni.warp.core-1.2.1] startup
+[1.638s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.641s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.641s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.644s] [ext: omni.isaac.core-3.18.1] startup
+[2.551s] [ext: omni.kit.window.title-1.1.3] startup
+[2.553s] [ext: omni.isaac.kit-1.13.0] startup
+[2.553s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.553s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.554s] Simulation App Starting
+[2.678s] app ready
+[2.834s] Simulation App Startup Complete
+2024-08-21 14:26:01 [19,188ms] [Warning] [carb] Client omni.stageupdate.plugin has acquired [omni::hydra::IOmniHydra v2.0] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2024-08-21 14:26:03 [20,942ms] [Warning] [omni.physx.plugin] Detected an articulation at /World/Robot with more than 4 velocity iterations being added to a TGS scene.The related behavior changed recently, please consult the changelog. This warning will only print once.
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+Warp 1.2.1 initialized:
+   CUDA Toolkit 11.8, Driver 12.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4070 Ti" (12 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.2.1
+2024-08-21 14:26:10 [28,340ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:26:10 [28,342ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_external_force_on_multiple_bodies (__main__.TestArticulation)
+Test application of external force on the legs of the robot. ... /isaac-sim/exts/omni.isaac.ml_archive/pip_prebundle/torch/nn/modules/module.py:1520: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters(). (Triggered internally at ../aten/src/ATen/native/cudnn/RNN.cpp:982.)
+  return forward_call(*args, **kwargs)
+ok
+test_external_force_on_single_body (__main__.TestArticulation)
+Test application of external force on the base of the robot. ... ok
+test_initialization_fixed_base (__main__.TestArticulation)
+Test initialization for fixed base. ... ok
+test_initialization_fixed_base_made_floating_base (__main__.TestArticulation)
+Test initialization for fixed base made floating-base using schema properties. ... ok
+test_initialization_fixed_base_single_joint (__main__.TestArticulation)
+Test initialization for fixed base articulation with a single joint. ... ok
+test_initialization_floating_base (__main__.TestArticulation)
+Test initialization for a floating-base with articulation root on provided prim path. ... ok
+test_initialization_floating_base_made_fixed_base (__main__.TestArticulation)
+Test initialization for a floating-base articulation made fixed-base using schema properties. ... ok
+test_initialization_floating_base_non_root (__main__.TestArticulation)
+Test initialization for a floating-base with articulation root on a rigid body ... ok
+test_initialization_hand_with_tendons (__main__.TestArticulation)
+Test initialization for fixed base articulated hand with tendons. ... ok
+test_loading_gains_from_usd (__main__.TestArticulation)
+Test that gains are loaded from USD file if actuator model has them as None. ... ok
+test_out_of_range_default_joint_pos (__main__.TestArticulation)
+Test that the default joint position from configuration is out of range. ... Traceback (most recent call last):
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 92, in <lambda>
+    lambda event, obj=weakref.proxy(self): obj._initialize_callback(event),
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 263, in _initialize_callback
+    self._initialize_impl()
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/articulation/articulation.py", line 808, in _initialize_impl
+    self._validate_cfg()
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/articulation/articulation.py", line 1108, in _validate_cfg
+    raise ValueError(msg)
+ValueError: The following joints have default positions out of the limits: 
+	- 'panda_joint1': 10.000 not in [-2.897, 2.897]
+	- 'panda_joint2': -20.000 not in [-1.763, 1.763]
+	- 'panda_joint4': -20.000 not in [-3.072, -0.070]
+
+ok
+test_out_of_range_default_joint_vel (__main__.TestArticulation)
+Test that the default joint velocity from configuration is out of range. ... Traceback (most recent call last):
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 92, in <lambda>
+    lambda event, obj=weakref.proxy(self): obj._initialize_callback(event),
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 263, in _initialize_callback
+    self._initialize_impl()
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/articulation/articulation.py", line 808, in _initialize_impl
+    self._validate_cfg()
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/articulation/articulation.py", line 1123, in _validate_cfg
+    raise ValueError(msg)
+ValueError: The following joints have default velocities out of the limits: 
+	- 'panda_joint1': 100.000 not in [-2.175, 2.175]
+	- 'panda_joint2': -60.000 not in [-2.175, 2.175]
+	- 'panda_joint4': -60.000 not in [-2.175, 2.175]
+
+ok
+test_setting_gains_from_cfg (__main__.TestArticulation)
+Test that gains are loaded from the configuration correctly. ... ok
+test_setting_gains_from_cfg_dict (__main__.TestArticulation)
+Test that gains are loaded from the configuration dictionary correctly. ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 24.504s
+
+OK
+
+[INFO] Time elapsed: 28.64 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/assets/test_articulation.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/assets/test_rigid_object.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142610.log
+2024-08-21 14:26:10 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.033s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.306s] [ext: omni.stats-1.0.1] startup
+[0.306s] [ext: omni.client-1.1.0] startup
+[0.327s] [ext: omni.assets.plugins-0.0.0] startup
+[0.328s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.335s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.350s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59569
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:26:11 [746ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.869s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.870s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.871s] [ext: omni.pip.compute-1.4.0] startup
+[0.871s] [ext: omni.pip.cloud-1.1.3] startup
+[0.874s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.874s] [ext: omni.mtlx-0.1.0] startup
+[0.875s] [ext: omni.usd.config-1.0.4] startup
+[0.877s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.878s] [ext: omni.usd.libs-1.0.1] startup
+[0.948s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.949s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.965s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.966s] [ext: omni.appwindow-1.1.8] startup
+[0.968s] [ext: omni.kit.renderer.core-1.0.1] startup
+[1.010s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[1.012s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.134s] [ext: omni.ui-2.23.11] startup
+[1.143s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.144s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.221s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.225s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.231s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.263s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.263s] [ext: omni.graph.exec-0.9.3] startup
+[1.264s] [ext: omni.usd_resolver-1.0.0] startup
+[1.267s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.268s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.269s] [ext: omni.usd.core-1.2.11] startup
+[1.272s] [ext: omni.kit.commands-1.4.9] startup
+[1.274s] [ext: omni.activity.core-1.0.1] startup
+[1.276s] [ext: omni.timeline-1.0.10] startup
+[1.277s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.282s] [ext: omni.kvdb-106.0.20] startup
+[1.283s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.284s] [ext: omni.localcache-106.0.20] startup
+[1.285s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.288s] [ext: omni.usdphysics-106.0.20] startup
+[1.290s] [ext: omni.physx.foundation-106.0.20] startup
+[1.291s] [ext: carb.audio-0.1.0] startup
+[1.293s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.327s] [ext: omni.physx.cooking-106.0.20] startup
+[1.333s] [ext: omni.datastore-0.0.0] startup
+[1.334s] [ext: omni.blobkey-1.1.0] startup
+[1.334s] [ext: omni.ujitso.default-1.0.0] startup
+[1.335s] [ext: omni.hsscclient-0.0.0] startup
+[1.337s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.338s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.353s] [ext: omni.physx-106.0.20] startup
+[1.366s] [ext: omni.usd-1.11.2] startup
+[1.393s] [ext: omni.physics.tensors-106.0.20] startup
+[1.461s] [ext: omni.physx.tensors-106.0.20] startup
+[1.485s] [ext: omni.physx.fabric-106.0.20] startup
+[1.490s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.499s] [ext: omni.isaac.version-1.1.0] startup
+[1.499s] [ext: omni.warp.core-1.2.1] startup
+[1.608s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.610s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.611s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.613s] [ext: omni.isaac.core-3.18.1] startup
+[2.509s] [ext: omni.kit.window.title-1.1.3] startup
+[2.511s] [ext: omni.isaac.kit-1.13.0] startup
+[2.511s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.511s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.512s] Simulation App Starting
+[2.641s] app ready
+[2.791s] Simulation App Startup Complete
+2024-08-21 14:26:19 [8,908ms] [Warning] [carb] Client omni.stageupdate.plugin has acquired [omni::hydra::IOmniHydra v2.0] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+2024-08-21 14:26:29 [18,412ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:26:29 [18,415ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_external_force_on_single_body (__main__.TestRigidObject)
+Test application of external force on the base of the object. ... ok
+test_gravity_vec_w (__main__.TestRigidObject)
+Test that gravity vector direction is set correctly for the rigid object. ... ok
+test_initialization (__main__.TestRigidObject)
+Test initialization for prim with rigid body API at the provided prim path. ... ok
+test_initialization_with_kinematic_enabled (__main__.TestRigidObject)
+Test that initialization for prim with kinematic flag enabled. ... ok
+test_initialization_with_no_rigid_body (__main__.TestRigidObject)
+Test that initialization fails when no rigid body is found at the provided prim path. ... Traceback (most recent call last):
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 92, in <lambda>
+    lambda event, obj=weakref.proxy(self): obj._initialize_callback(event),
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 263, in _initialize_callback
+    self._initialize_impl()
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/rigid_object/rigid_object.py", line 274, in _initialize_impl
+    raise RuntimeError(
+RuntimeError: Failed to find a rigid body when resolving '/World/Table_.*/Object'. Please ensure that the prim has 'USD RigidBodyAPI' applied.
+Traceback (most recent call last):
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 92, in <lambda>
+    lambda event, obj=weakref.proxy(self): obj._initialize_callback(event),
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 263, in _initialize_callback
+    self._initialize_impl()
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/rigid_object/rigid_object.py", line 274, in _initialize_impl
+    raise RuntimeError(
+RuntimeError: Failed to find a rigid body when resolving '/World/Table_.*/Object'. Please ensure that the prim has 'USD RigidBodyAPI' applied.
+Traceback (most recent call last):
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 92, in <lambda>
+    lambda event, obj=weakref.proxy(self): obj._initialize_callback(event),
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 263, in _initialize_callback
+    self._initialize_impl()
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/rigid_object/rigid_object.py", line 274, in _initialize_impl
+    raise RuntimeError(
+RuntimeError: Failed to find a rigid body when resolving '/World/Table_.*/Object'. Please ensure that the prim has 'USD RigidBodyAPI' applied.
+Traceback (most recent call last):
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 92, in <lambda>
+    lambda event, obj=weakref.proxy(self): obj._initialize_callback(event),
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/asset_base.py", line 263, in _initialize_callback
+    self._initialize_impl()
+  File "/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/assets/rigid_object/rigid_object.py", line 274, in _initialize_impl
+    raise RuntimeError(
+RuntimeError: Failed to find a rigid body when resolving '/World/Table_.*/Object'. Please ensure that the prim has 'USD RigidBodyAPI' applied.
+ok
+test_reset_rigid_object (__main__.TestRigidObject)
+Test resetting the state of the rigid object. ... ok
+test_rigid_body_no_friction (__main__.TestRigidObject)
+Test that a rigid object with no friction will maintain it's velocity when sliding across a plane. ... ok
+test_rigid_body_set_mass (__main__.TestRigidObject)
+Test getting and setting mass of rigid object. ... ok
+test_rigid_body_set_material_properties (__main__.TestRigidObject)
+Test getting and setting material properties of rigid object. ... ok
+test_set_rigid_object_state (__main__.TestRigidObject)
+Test setting the state of the rigid object. ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 15.151s
+
+OK
+
+[INFO] Time elapsed: 18.72 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/assets/test_rigid_object.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/deps/test_scipy.py'
+
+
+test_interpolation (__main__.TestScipyOperations)
+Test scipy interpolation 2D method. ... /workspace/isaaclab/source/extensions/omni.isaac.lab/test/deps/test_scipy.py:55: DeprecationWarning: `interp2d` is deprecated!
+`interp2d` is deprecated in SciPy 1.10 and will be removed in SciPy 1.12.0.
+
+For legacy code, nearly bug-for-bug compatible replacements are
+`RectBivariateSpline` on regular grids, and `bisplrep`/`bisplev` for
+scattered 2D data.
+
+In new code, for regular grids use `RegularGridInterpolator` instead.
+For scattered data, prefer `LinearNDInterpolator` or
+`CloughTocher2DInterpolator`.
+
+For more details see
+`https://gist.github.com/ev-br/8544371b40f414b7eaf3fe6217209bff`
+
+  func_interp2d = interpolate.interp2d(y, x, height_field_downsampled, kind="cubic")
+/workspace/isaaclab/source/extensions/omni.isaac.lab/test/deps/test_scipy.py:56: DeprecationWarning:         `interp2d` is deprecated!
+        `interp2d` is deprecated in SciPy 1.10 and will be removed in SciPy 1.12.0.
+
+        For legacy code, nearly bug-for-bug compatible replacements are
+        `RectBivariateSpline` on regular grids, and `bisplrep`/`bisplev` for
+        scattered 2D data.
+
+        In new code, for regular grids use `RegularGridInterpolator` instead.
+        For scattered data, prefer `LinearNDInterpolator` or
+        `CloughTocher2DInterpolator`.
+
+        For more details see
+        `https://gist.github.com/ev-br/8544371b40f414b7eaf3fe6217209bff`
+
+  z_upsampled_interp2d = func_interp2d(y_upsampled, x_upsampled)
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.756s
+
+OK
+
+[INFO] Time elapsed: 1.11 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/deps/test_scipy.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/deps/test_torch.py'
+
+Time for logical or: <torch.utils.benchmark.utils.common.Measurement object at 0x7fe81da39000>
+torch.logical_or(my_tensor_1, my_tensor_2)
+  3.79 us
+  1 measurement, 1000 runs , 1 thread
+Time for bitwise or: <torch.utils.benchmark.utils.common.Measurement object at 0x7fe81da39180>
+my_tensor_1 | my_tensor_2
+  3.30 us
+  1 measurement, 1000 runs , 1 thread
+
+test_array_circular (__main__.TestTorchOperations)
+Check circular buffer implementation in torch. ... ok
+test_array_circular_copy (__main__.TestTorchOperations)
+Check that circular buffer implementation in torch is copying data. ... ok
+test_array_multi_indexing (__main__.TestTorchOperations)
+Check multi-indexing works for torch tensors. ... ok
+test_array_single_indexing (__main__.TestTorchOperations)
+Check how indexing effects the returned tensor. ... ok
+test_array_slicing (__main__.TestTorchOperations)
+Check that using ellipsis and slices work for torch tensors. ... ok
+test_logical_or (__main__.TestTorchOperations)
+Test bitwise or operation. ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.139s
+
+OK
+
+[INFO] Time elapsed: 1.67 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/deps/test_torch.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/envs/test_env_rendering_logic.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142632.log
+2024-08-21 14:26:32 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.032s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.347s] [ext: omni.stats-1.0.1] startup
+[0.348s] [ext: omni.client-1.1.0] startup
+[0.369s] [ext: omni.datastore-0.0.0] startup
+[0.369s] [ext: omni.blobkey-1.1.0] startup
+[0.369s] [ext: omni.ujitso.default-1.0.0] startup
+[0.370s] [ext: omni.hsscclient-0.0.0] startup
+[0.370s] [ext: omni.rtx.shadercache.vulkan-1.0.0] startup
+[0.371s] [ext: omni.assets.plugins-0.0.0] startup
+[0.372s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.379s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.395s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59579
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:26:33 [788ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.915s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.916s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.916s] [ext: omni.pip.compute-1.4.0] startup
+[0.916s] [ext: omni.pip.cloud-1.1.3] startup
+[0.919s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.919s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.920s] [ext: omni.kit.test-0.0.0] startup
+[0.958s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.973s] [ext: omni.mtlx-0.1.0] startup
+[0.973s] [ext: omni.usd.config-1.0.4] startup
+[0.977s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.977s] [ext: omni.usd.libs-1.0.1] startup
+[1.059s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[1.059s] [ext: omni.appwindow-1.1.8] startup
+[1.060s] [ext: omni.kit.renderer.core-1.0.1] startup
+[1.107s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[1.109s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.203s] [ext: omni.ui-2.23.11] startup
+[1.211s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.212s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.280s] [ext: omni.usd.schema.anim-0.0.0] startup
+[1.307s] [ext: omni.usd.schema.omnigraph-1.0.0] startup
+[1.312s] [ext: omni.usd.schema.forcefield-106.0.20] startup
+[1.328s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.331s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.351s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.353s] [ext: omni.usd_resolver-1.0.0] startup
+[1.357s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.357s] [ext: omni.usd.core-1.2.11] startup
+[1.360s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.361s] [ext: omni.timeline-1.0.10] startup
+[1.362s] [ext: omni.kit.menu.utils-1.5.27] startup
+[1.374s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.379s] [ext: omni.ujitso.processor.texture-1.0.0] startup
+[1.380s] [ext: omni.iray.libs-0.0.0] startup
+[1.383s] [ext: omni.volume-0.5.0] startup
+[1.385s] [ext: omni.ujitso.client-0.0.0] startup
+[1.385s] [ext: omni.mdl.neuraylib-0.2.5] startup
+[1.386s] [ext: carb.audio-0.1.0] startup
+[1.388s] [ext: omni.hydra.rtx-0.2.0] startup
+[1.398s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.399s] [ext: omni.activity.core-1.0.1] startup
+[1.401s] [ext: omni.kit.window.popup_dialog-2.0.24] startup
+[1.402s] [ext: omni.graph.exec-0.9.3] startup
+[1.403s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.404s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.439s] [ext: omni.kit.widget.nucleus_connector-1.1.8] startup
+[1.440s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.442s] [ext: omni.kit.commands-1.4.9] startup
+[1.445s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.462s] [ext: omni.ui.scene-1.9.3] startup
+[1.466s] [ext: omni.usd-1.11.2] startup
+[1.499s] [ext: omni.kit.notification_manager-1.0.8] startup
+[1.501s] [ext: omni.kit.hydra_texture-1.2.6] startup
+[1.504s] [ext: omni.kit.clipboard-1.0.3] startup
+[1.505s] [ext: omni.kit.widget.viewport-106.0.3] startup
+[1.508s] [ext: omni.kit.widget.context_menu-1.2.1] startup
+[1.509s] [ext: omni.kit.widget.options_menu-1.1.4] startup
+[1.511s] [ext: omni.kit.helper.file_utils-0.1.8] startup
+[1.512s] [ext: omni.kit.widget.path_field-2.0.9] startup
+[1.513s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.519s] [ext: omni.kit.widget.options_button-1.0.2] startup
+[1.520s] [ext: omni.kit.widget.filebrowser-2.10.48] startup
+[1.524s] [ext: omni.kit.widget.browser_bar-2.0.10] startup
+[1.524s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.526s] [ext: omni.kit.window.filepicker-2.10.34] startup
+[1.535s] [ext: omni.kit.stage_template.core-1.1.21] startup
+[1.536s] [ext: omni.physx.foundation-106.0.20] startup
+[1.536s] [ext: omni.kit.stage_templates-1.2.3] startup
+[1.537s] [ext: omni.kit.window.file_importer-1.1.11] startup
+[1.539s] [ext: omni.mdl-52.0.1] startup
+[1.556s] [ext: omni.kit.context_menu-1.8.0] startup
+[1.557s] [ext: omni.inspect-1.0.1] startup
+[1.559s] [ext: omni.kit.material.library-1.4.4] startup
+[1.562s] [ext: omni.kit.viewport.registry-104.0.6] startup
+[1.563s] [ext: omni.kit.raycast.query-1.0.5] startup
+[1.569s] [ext: omni.hydra.engine.stats-1.0.2] startup
+[1.572s] [ext: omni.kit.widget.settings-1.1.1] startup
+[1.574s] [ext: omni.kit.viewport.window-106.0.8] startup
+[1.587s] [ext: omni.kit.window.preferences-1.5.3] startup
+[1.591s] [ext: omni.kit.viewport.utility-1.0.17] startup
+[1.591s] [ext: omni.kit.widget.toolbar-1.6.2] startup
+[1.596s] [ext: omni.kit.manipulator.transform-104.7.5] startup
+[1.659s] [ext: omni.kit.window.file_exporter-1.0.29] startup
+[1.660s] [ext: omni.kit.manipulator.tool.snap-1.4.5] startup
+[1.665s] [ext: omni.kit.window.file-1.3.52] startup
+[1.668s] [ext: omni.kit.widget.text_editor-1.0.2] startup
+[1.669s] [ext: omni.kvdb-106.0.20] startup
+[1.670s] [ext: omni.kit.widget.highlight_label-1.0.2] startup
+[1.671s] [ext: omni.usdphysics-106.0.20] startup
+[1.690s] [ext: omni.localcache-106.0.20] startup
+[1.691s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.696s] [ext: omni.kit.widget.filter-1.1.4] startup
+[1.696s] [ext: omni.kit.hotkeys.core-1.3.3] startup
+[1.700s] [ext: omni.physx.cooking-106.0.20] startup
+[1.736s] [ext: omni.kit.widget.searchfield-1.1.6] startup
+[1.737s] [ext: omni.kit.widget.stage-2.10.26] startup
+[1.745s] [ext: omni.physx-106.0.20] startup
+[1.756s] [ext: omni.kit.window.property-1.11.1] startup
+[1.758s] [ext: omni.debugdraw-0.1.3] startup
+[1.761s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.763s] [ext: omni.kit.property.usd-3.21.28] startup
+[1.771s] [ext: omni.usdphysics.ui-106.0.20] startup
+[1.793s] [ext: omni.physx.commands-106.0.20] startup
+[1.797s] [ext: omni.kit.property.material-1.9.4] startup
+[1.799s] [ext: omni.physx.ui-106.0.20] startup
+[1.822s] [ext: omni.kit.widget.graph-1.12.8] startup
+[1.826s] [ext: omni.physx.demos-106.0.20] startup
+[1.843s] [ext: omni.graph.core-2.170.3] startup
+[1.846s] [ext: omni.kit.property.physx-106.0.20] startup
+[1.901s] [ext: omni.kit.graph.delegate.default-1.2.2] startup
+[1.902s] [ext: omni.ui_query-1.1.2] startup
+[1.903s] [ext: omni.graph.tools-1.78.0] startup
+[1.920s] [ext: omni.kit.graph.editor.core-1.5.3] startup
+[1.921s] [ext: omni.kit.ui_test-1.2.18] startup
+[1.922s] [ext: omni.graph-1.135.0] startup
+[1.958s] [ext: omni.physx.vehicle-106.0.20] startup
+[1.973s] [ext: omni.kit.widget.material_preview-1.0.16] startup
+[1.976s] [ext: omni.kit.graph.usd.commands-1.3.1] startup
+[1.977s] [ext: omni.physx.camera-106.0.20] startup
+[1.986s] [ext: omni.graph.action_core-1.1.4] startup
+[1.992s] [ext: omni.kit.window.material_graph-1.8.15] startup
+[2.099s] [ext: omni.physx.cct-106.0.20] startup
+[2.108s] [ext: omni.physx.graph-106.0.20] startup
+[2.124s] [ext: omni.command.usd-1.0.3] startup
+[2.127s] [ext: omni.physics.tensors-106.0.20] startup
+[2.134s] [ext: omni.kit.manipulator.selector-1.1.1] startup
+[2.139s] [ext: omni.physx.tensors-106.0.20] startup
+[2.143s] [ext: omni.kit.viewport.manipulator.transform-106.0.1] startup
+[2.145s] [ext: omni.kit.manipulator.selection-104.0.9] startup
+[2.148s] [ext: omni.kit.manipulator.prim.core-107.0.3] startup
+[2.155s] [ext: omni.fabric.commands-1.1.4] startup
+[2.161s] [ext: omni.kit.widget.prompt-1.0.7] startup
+[2.163s] [ext: omni.kit.manipulator.prim.usd-106.0.1] startup
+[2.165s] [ext: omni.kit.manipulator.prim.fabric-106.0.1] startup
+[2.166s] [ext: omni.kit.window.toolbar-1.6.1] startup
+[2.169s] [ext: omni.kit.widget.layers-1.7.9] startup
+[2.183s] [ext: omni.kit.manipulator.prim-106.0.0] startup
+[2.183s] [ext: omni.physx.telemetry-106.0.20] startup
+[2.186s] [ext: omni.physx.supportui-106.0.20] startup
+[2.197s] [ext: omni.graph.image.core-0.3.2] startup
+[2.200s] [ext: omni.graph.ui-1.70.0] startup
+[2.211s] [ext: omni.physx.bundle-106.0.20] startup
+[2.211s] [ext: omni.graph.image.nodes-1.0.2] startup
+[2.213s] [ext: omni.graph.action_nodes-1.23.0] startup
+[2.219s] [ext: omni.sensors.tiled-0.0.4] startup
+[2.222s] [ext: omni.warp.core-1.2.1] startup
+[2.224s] [ext: omni.graph.nodes-1.143.0] startup
+[2.233s] [ext: omni.graph.action-1.102.1] startup
+[2.234s] [ext: omni.syntheticdata-0.6.7] startup
+[2.252s] [ext: omni.graph.ui_nodes-1.25.1] startup
+[2.258s] [ext: omni.isaac.version-1.1.0] startup
+[2.262s] [ext: omni.warp-1.2.1] startup
+[2.277s] [ext: omni.graph.scriptnode-1.19.1] startup
+[2.286s] [ext: omni.graph.bundle.action-2.0.4] startup
+[2.287s] [ext: omni.isaac.nucleus-0.3.0] startup
+[2.290s] [ext: omni.replicator.core-1.11.14] startup
+2024-08-21 14:26:35 [2,624ms] [Warning] [omni.replicator.core.scripts.annotators] Annotator PostProcessDispatch is already registered, overwriting annotator template
+[3.011s] [ext: omni.isaac.core-3.18.1] startup
+[4.064s] [ext: omni.isaac.kit-1.13.0] startup
+[4.066s] [ext: omni.replicator.isaac-1.15.0] startup
+[4.081s] [ext: omni.physx.fabric-106.0.20] startup
+[4.085s] [ext: omni.kit.window.title-1.1.3] startup
+[4.087s] [ext: omni.isaac.cloner-0.8.1] startup
+[4.090s] [ext: omni.kit.viewport.rtx-104.0.1] startup
+[4.090s] [ext: isaaclab.python.headless-1.1.0] startup
+[4.091s] [ext: isaaclab.python.headless.rendering-1.1.0] startup
+[4.092s] Simulation App Starting
+[62.858s] app ready
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.rendering.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.rendering.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+Warp 1.2.1 initialized:
+   CUDA Toolkit 11.8, Driver 12.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4070 Ti" (12 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.2.1
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000473 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.289407 seconds
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.01
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000685 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.284806 seconds
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000468 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.284339 seconds
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.04
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000503 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.335312 seconds
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.05
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000529 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.294425 seconds
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000512 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.285161 seconds
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 0 active terms.
++----------------------------+
+|  Active Termination Terms  |
++--------+-------+-----------+
+| Index  | Name  |  Time Out |
++--------+-------+-----------+
++--------+-------+-----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.01
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000991 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.287482 seconds
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 0 active terms.
++----------------------------+
+|  Active Termination Terms  |
++--------+-------+-----------+
+| Index  | Name  |  Time Out |
++--------+-------+-----------+
++--------+-------+-----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000430 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.285702 seconds
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 0 active terms.
++----------------------------+
+|  Active Termination Terms  |
++--------+-------+-----------+
+| Index  | Name  |  Time Out |
++--------+-------+-----------+
++--------+-------+-----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.04
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000477 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.291760 seconds
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 0 active terms.
++----------------------------+
+|  Active Termination Terms  |
++--------+-------+-----------+
+| Index  | Name  |  Time Out |
++--------+-------+-----------+
++--------+-------+-----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.05
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000573 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.287616 seconds
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 0 active terms.
++----------------------------+
+|  Active Termination Terms  |
++--------+-------+-----------+
+| Index  | Name  |  Time Out |
++--------+-------+-----------+
++--------+-------+-----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.005
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000462 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.284660 seconds
+[INFO]: Completed setting up the environment...
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.01
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000499 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.289783 seconds
+[INFO]: Completed setting up the environment...
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000442 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.304484 seconds
+[INFO]: Completed setting up the environment...
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.04
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000483 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.286181 seconds
+[INFO]: Completed setting up the environment...
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.05
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000795 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.292414 seconds
+[INFO]: Completed setting up the environment...
+[63.384s] Simulation App Startup Complete
+2024-08-21 14:27:36 [64,291ms] [Warning] [omni.isaac.lab.envs.manager_based_env] The render interval (1) is smaller than the decimation (4). Multiple multiple render calls will happen for each environment step. If this is not intended, set the render interval to be equal to the decimation.
+2024-08-21 14:27:38 [66,096ms] [Warning] [omni.isaac.lab.envs.manager_based_env] The render interval (2) is smaller than the decimation (4). Multiple multiple render calls will happen for each environment step. If this is not intended, set the render interval to be equal to the decimation.
+2024-08-21 14:27:42 [70,414ms] [Warning] [omni.isaac.lab.envs.manager_based_env] The render interval (1) is smaller than the decimation (4). Multiple multiple render calls will happen for each environment step. If this is not intended, set the render interval to be equal to the decimation.
+2024-08-21 14:27:44 [72,141ms] [Warning] [omni.isaac.lab.envs.manager_based_env] The render interval (2) is smaller than the decimation (4). Multiple multiple render calls will happen for each environment step. If this is not intended, set the render interval to be equal to the decimation.
+2024-08-21 14:27:45 [73,397ms] [Warning] [carb] Client omni.stageupdate.plugin has acquired [omni::hydra::IOmniHydra v2.0] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2024-08-21 14:27:48 [76,455ms] [Warning] [omni.isaac.lab.envs.direct_rl_env] The render interval (1) is smaller than the decimation (4). Multiple multiple render calls will happen for each environment step.If this is not intended, set the render interval to be equal to the decimation.
+2024-08-21 14:27:50 [78,222ms] [Warning] [omni.isaac.lab.envs.direct_rl_env] The render interval (2) is smaller than the decimation (4). Multiple multiple render calls will happen for each environment step.If this is not intended, set the render interval to be equal to the decimation.
+2024-08-21 14:27:54 [82,437ms] [Warning] [carb] [Plugin: omni.sensors.tiled.plugin] Module /isaac-sim/extscache/omni.sensors.tiled-0.0.4+106.0.0.lx64.r/bin/libomni.sensors.tiled.plugin.so remained loaded after unload request
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-08-21 14:27:54 [82,445ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Core' for removal
+2024-08-21 14:27:55 [82,696ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+
+Warning: Possible version incompatibility. Attempting to load omni::fabric::IPath with version v0.2 against v0.1.
+Warning: Possible version incompatibility. Attempting to load omni::fabric::IPath with version v0.2 against v0.1.
+test_env_rendering_logic (__main__.TestEnvRenderingLogic) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 18.303s
+
+OK
+
+[INFO] Time elapsed: 83.30 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/envs/test_env_rendering_logic.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/envs/test_manager_based_env.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142755.log
+2024-08-21 14:27:55 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.032s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.307s] [ext: omni.stats-1.0.1] startup
+[0.307s] [ext: omni.client-1.1.0] startup
+[0.328s] [ext: omni.assets.plugins-0.0.0] startup
+[0.329s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.336s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.351s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59586
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:27:56 [736ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.858s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.859s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.860s] [ext: omni.pip.compute-1.4.0] startup
+[0.860s] [ext: omni.pip.cloud-1.1.3] startup
+[0.863s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.863s] [ext: omni.mtlx-0.1.0] startup
+[0.864s] [ext: omni.usd.config-1.0.4] startup
+[0.866s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.866s] [ext: omni.usd.libs-1.0.1] startup
+[0.937s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.937s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.955s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.956s] [ext: omni.appwindow-1.1.8] startup
+[0.958s] [ext: omni.kit.renderer.core-1.0.1] startup
+[1.017s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[1.019s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.140s] [ext: omni.ui-2.23.11] startup
+[1.150s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.151s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.227s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.230s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.235s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.267s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.267s] [ext: omni.graph.exec-0.9.3] startup
+[1.268s] [ext: omni.usd_resolver-1.0.0] startup
+[1.271s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.272s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.274s] [ext: omni.usd.core-1.2.11] startup
+[1.276s] [ext: omni.kit.commands-1.4.9] startup
+[1.279s] [ext: omni.activity.core-1.0.1] startup
+[1.280s] [ext: omni.timeline-1.0.10] startup
+[1.281s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.286s] [ext: omni.kvdb-106.0.20] startup
+[1.287s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.288s] [ext: omni.localcache-106.0.20] startup
+[1.289s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.293s] [ext: omni.usdphysics-106.0.20] startup
+[1.295s] [ext: omni.physx.foundation-106.0.20] startup
+[1.295s] [ext: carb.audio-0.1.0] startup
+[1.297s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.332s] [ext: omni.physx.cooking-106.0.20] startup
+[1.339s] [ext: omni.datastore-0.0.0] startup
+[1.339s] [ext: omni.blobkey-1.1.0] startup
+[1.339s] [ext: omni.ujitso.default-1.0.0] startup
+[1.340s] [ext: omni.hsscclient-0.0.0] startup
+[1.342s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.343s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.358s] [ext: omni.physx-106.0.20] startup
+[1.371s] [ext: omni.usd-1.11.2] startup
+[1.397s] [ext: omni.physics.tensors-106.0.20] startup
+[1.485s] [ext: omni.physx.tensors-106.0.20] startup
+[1.489s] [ext: omni.physx.fabric-106.0.20] startup
+[1.494s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.534s] [ext: omni.isaac.version-1.1.0] startup
+[1.534s] [ext: omni.warp.core-1.2.1] startup
+[1.619s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.621s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.621s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.624s] [ext: omni.isaac.core-3.18.1] startup
+[2.528s] [ext: omni.kit.window.title-1.1.3] startup
+[2.530s] [ext: omni.isaac.kit-1.13.0] startup
+[2.530s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.530s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.531s] Simulation App Starting
+[2.660s] app ready
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+Warp 1.2.1 initialized:
+   CUDA Toolkit 11.8, Driver 12.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4070 Ti" (12 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.2.1
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000191 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.253607 seconds
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[INFO]: Base environment:
+	Environment device    : cpu
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+	Physics GPU pipeline  : True
+	Physics GPU simulation: True
+[INFO]: Time taken for scene creation : 0.000159 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 1.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.003702 seconds
+[INFO] Action Manager:  <ActionManager> contains 0 active terms.
++---------------------------------+
+|  Active Action Terms (shape: 0) |
++---------+--------+--------------+
+|  Index  | Name   |    Dimension |
++---------+--------+--------------+
++---------+--------+--------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 0 groups.
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++--------+----------------------------+
+| Index  | Name                       |
++--------+----------------------------+
+|   0    | reset_scene_to_default     |
++--------+----------------------------+
+
+[2.816s] Simulation App Startup Complete
+2024-08-21 14:28:00 [4,391ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:28:00 [4,394ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_initialization (__main__.TestManagerBasedEnv) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.680s
+
+OK
+
+[INFO] Time elapsed: 4.69 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/envs/test_manager_based_env.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/envs/test_null_command_term.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142800.log
+2024-08-21 14:28:00 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.032s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.310s] [ext: omni.stats-1.0.1] startup
+[0.311s] [ext: omni.client-1.1.0] startup
+[0.331s] [ext: omni.assets.plugins-0.0.0] startup
+[0.332s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.339s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.355s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59580
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:28:01 [731ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.854s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.855s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.856s] [ext: omni.pip.compute-1.4.0] startup
+[0.856s] [ext: omni.pip.cloud-1.1.3] startup
+[0.859s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.859s] [ext: omni.mtlx-0.1.0] startup
+[0.860s] [ext: omni.usd.config-1.0.4] startup
+[0.862s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.863s] [ext: omni.usd.libs-1.0.1] startup
+[0.931s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.931s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.947s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.947s] [ext: omni.appwindow-1.1.8] startup
+[0.949s] [ext: omni.kit.renderer.core-1.0.1] startup
+[0.993s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[0.995s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.109s] [ext: omni.ui-2.23.11] startup
+[1.118s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.119s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.196s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.199s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.204s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.235s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.236s] [ext: omni.graph.exec-0.9.3] startup
+[1.236s] [ext: omni.usd_resolver-1.0.0] startup
+[1.239s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.241s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.242s] [ext: omni.usd.core-1.2.11] startup
+[1.245s] [ext: omni.kit.commands-1.4.9] startup
+[1.247s] [ext: omni.activity.core-1.0.1] startup
+[1.248s] [ext: omni.timeline-1.0.10] startup
+[1.250s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.254s] [ext: omni.kvdb-106.0.20] startup
+[1.255s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.257s] [ext: omni.localcache-106.0.20] startup
+[1.258s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.261s] [ext: omni.usdphysics-106.0.20] startup
+[1.263s] [ext: omni.physx.foundation-106.0.20] startup
+[1.263s] [ext: carb.audio-0.1.0] startup
+[1.285s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.320s] [ext: omni.physx.cooking-106.0.20] startup
+[1.326s] [ext: omni.datastore-0.0.0] startup
+[1.326s] [ext: omni.blobkey-1.1.0] startup
+[1.327s] [ext: omni.ujitso.default-1.0.0] startup
+[1.328s] [ext: omni.hsscclient-0.0.0] startup
+[1.330s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.331s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.346s] [ext: omni.physx-106.0.20] startup
+[1.359s] [ext: omni.usd-1.11.2] startup
+[1.384s] [ext: omni.physics.tensors-106.0.20] startup
+[1.464s] [ext: omni.physx.tensors-106.0.20] startup
+[1.468s] [ext: omni.physx.fabric-106.0.20] startup
+[1.473s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.498s] [ext: omni.isaac.version-1.1.0] startup
+[1.498s] [ext: omni.warp.core-1.2.1] startup
+[1.602s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.604s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.604s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.607s] [ext: omni.isaac.core-3.18.1] startup
+[2.523s] [ext: omni.kit.window.title-1.1.3] startup
+[2.524s] [ext: omni.isaac.kit-1.13.0] startup
+[2.524s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.524s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.525s] Simulation App Starting
+[2.659s] app ready
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+Warp 1.2.1 initialized:
+   CUDA Toolkit 11.8, Driver 12.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4070 Ti" (12 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.2.1
+
+NullCommand:
+	Command dimension: N/A
+	Resampling time range: (inf, inf)
+[2.823s] Simulation App Startup Complete
+2024-08-21 14:28:04 [3,788ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:28:04 [3,791ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_compute (__main__.TestNullCommandTerm)
+Test the compute function. For null command generator, it does nothing. ... ok
+test_str (__main__.TestNullCommandTerm)
+Test the string representation of the command manager. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK
+
+[INFO] Time elapsed: 4.09 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/envs/test_null_command_term.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/managers/test_observation_manager.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142804.log
+2024-08-21 14:28:04 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.033s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.298s] [ext: omni.stats-1.0.1] startup
+[0.299s] [ext: omni.client-1.1.0] startup
+[0.320s] [ext: omni.assets.plugins-0.0.0] startup
+[0.320s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.328s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.343s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59571
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:28:05 [736ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.860s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.861s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.861s] [ext: omni.pip.compute-1.4.0] startup
+[0.862s] [ext: omni.pip.cloud-1.1.3] startup
+[0.865s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.865s] [ext: omni.mtlx-0.1.0] startup
+[0.865s] [ext: omni.usd.config-1.0.4] startup
+[0.868s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.868s] [ext: omni.usd.libs-1.0.1] startup
+[0.921s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.922s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.938s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.939s] [ext: omni.appwindow-1.1.8] startup
+[0.940s] [ext: omni.kit.renderer.core-1.0.1] startup
+[0.992s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[0.994s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.136s] [ext: omni.ui-2.23.11] startup
+[1.145s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.146s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.222s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.225s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.230s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.261s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.261s] [ext: omni.graph.exec-0.9.3] startup
+[1.262s] [ext: omni.usd_resolver-1.0.0] startup
+[1.265s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.266s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.267s] [ext: omni.usd.core-1.2.11] startup
+[1.270s] [ext: omni.kit.commands-1.4.9] startup
+[1.273s] [ext: omni.activity.core-1.0.1] startup
+[1.274s] [ext: omni.timeline-1.0.10] startup
+[1.275s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.280s] [ext: omni.kvdb-106.0.20] startup
+[1.281s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.282s] [ext: omni.localcache-106.0.20] startup
+[1.283s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.286s] [ext: omni.usdphysics-106.0.20] startup
+[1.288s] [ext: omni.physx.foundation-106.0.20] startup
+[1.288s] [ext: carb.audio-0.1.0] startup
+[1.290s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.325s] [ext: omni.physx.cooking-106.0.20] startup
+[1.331s] [ext: omni.datastore-0.0.0] startup
+[1.331s] [ext: omni.blobkey-1.1.0] startup
+[1.331s] [ext: omni.ujitso.default-1.0.0] startup
+[1.333s] [ext: omni.hsscclient-0.0.0] startup
+[1.334s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.336s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.350s] [ext: omni.physx-106.0.20] startup
+[1.362s] [ext: omni.usd-1.11.2] startup
+[1.387s] [ext: omni.physics.tensors-106.0.20] startup
+[1.441s] [ext: omni.physx.tensors-106.0.20] startup
+[1.458s] [ext: omni.physx.fabric-106.0.20] startup
+[1.463s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.471s] [ext: omni.isaac.version-1.1.0] startup
+[1.471s] [ext: omni.warp.core-1.2.1] startup
+[1.593s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.595s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.596s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.598s] [ext: omni.isaac.core-3.18.1] startup
+[2.505s] [ext: omni.kit.window.title-1.1.3] startup
+[2.506s] [ext: omni.isaac.kit-1.13.0] startup
+[2.506s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.507s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.507s] Simulation App Starting
+[2.636s] app ready
+[2.795s] Simulation App Startup Complete
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+Warp 1.2.1 initialized:
+   CUDA Toolkit 11.8, Driver 12.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4070 Ti" (12 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.2.1
+
+<ObservationManager> contains 1 groups.
++--------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (17,)) |
++---------------+------------------+---------------+
+|     Index     | Name             |     Shape     |
++---------------+------------------+---------------+
+|       0       | term_1           |      (4,)     |
+|       1       | term_2           |      (4,)     |
+|       2       | term_3           |      (1,)     |
+|       3       | term_4           |      (5,)     |
+|       4       | term_5           |      (3,)     |
++---------------+------------------+---------------+
+
+2024-08-21 14:28:08 [3,783ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:28:08 [3,785ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_callable_class_term (__main__.TestObservationManager)
+Test the observation computation with callable class term. ... ok
+test_compute (__main__.TestObservationManager)
+Test the observation computation. ... ok
+test_config_equivalence (__main__.TestObservationManager)
+Test the equivalence of observation manager created from different config types. ... ok
+test_config_terms (__main__.TestObservationManager)
+Test the number of terms in the observation manager. ... ok
+test_invalid_observation_config (__main__.TestObservationManager)
+Test the invalid observation config. ... ok
+test_non_callable_class_term (__main__.TestObservationManager)
+Test the observation computation with non-callable class term. ... ok
+test_str (__main__.TestObservationManager)
+Test the string representation of the observation manager. ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.082s
+
+OK
+
+[INFO] Time elapsed: 4.09 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/managers/test_observation_manager.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/managers/test_reward_manager.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142808.log
+2024-08-21 14:28:08 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.027s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.308s] [ext: omni.stats-1.0.1] startup
+[0.309s] [ext: omni.client-1.1.0] startup
+[0.330s] [ext: omni.assets.plugins-0.0.0] startup
+[0.330s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.338s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.353s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59575
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:28:09 [716ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.838s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.839s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.840s] [ext: omni.pip.compute-1.4.0] startup
+[0.840s] [ext: omni.pip.cloud-1.1.3] startup
+[0.843s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.843s] [ext: omni.mtlx-0.1.0] startup
+[0.844s] [ext: omni.usd.config-1.0.4] startup
+[0.846s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.847s] [ext: omni.usd.libs-1.0.1] startup
+[0.918s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.918s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.935s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.935s] [ext: omni.appwindow-1.1.8] startup
+[0.937s] [ext: omni.kit.renderer.core-1.0.1] startup
+[0.981s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[0.983s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.105s] [ext: omni.ui-2.23.11] startup
+[1.114s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.115s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.191s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.195s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.200s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.232s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.233s] [ext: omni.graph.exec-0.9.3] startup
+[1.233s] [ext: omni.usd_resolver-1.0.0] startup
+[1.237s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.238s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.239s] [ext: omni.usd.core-1.2.11] startup
+[1.242s] [ext: omni.kit.commands-1.4.9] startup
+[1.244s] [ext: omni.activity.core-1.0.1] startup
+[1.246s] [ext: omni.timeline-1.0.10] startup
+[1.247s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.252s] [ext: omni.kvdb-106.0.20] startup
+[1.253s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.254s] [ext: omni.localcache-106.0.20] startup
+[1.255s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.258s] [ext: omni.usdphysics-106.0.20] startup
+[1.260s] [ext: omni.physx.foundation-106.0.20] startup
+[1.261s] [ext: carb.audio-0.1.0] startup
+[1.279s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.314s] [ext: omni.physx.cooking-106.0.20] startup
+[1.320s] [ext: omni.datastore-0.0.0] startup
+[1.320s] [ext: omni.blobkey-1.1.0] startup
+[1.320s] [ext: omni.ujitso.default-1.0.0] startup
+[1.322s] [ext: omni.hsscclient-0.0.0] startup
+[1.324s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.325s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.341s] [ext: omni.physx-106.0.20] startup
+[1.354s] [ext: omni.usd-1.11.2] startup
+[1.379s] [ext: omni.physics.tensors-106.0.20] startup
+[1.437s] [ext: omni.physx.tensors-106.0.20] startup
+[1.446s] [ext: omni.physx.fabric-106.0.20] startup
+[1.451s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.460s] [ext: omni.isaac.version-1.1.0] startup
+[1.461s] [ext: omni.warp.core-1.2.1] startup
+[1.568s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.570s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.570s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.573s] [ext: omni.isaac.core-3.18.1] startup
+[2.463s] [ext: omni.kit.window.title-1.1.3] startup
+[2.464s] [ext: omni.isaac.kit-1.13.0] startup
+[2.464s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.465s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.465s] Simulation App Starting
+[2.599s] app ready
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+Warp 1.2.1 initialized:
+   CUDA Toolkit 11.8, Driver 12.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4070 Ti" (12 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.2.1
+
+<RewardManager> contains 3 active terms.
++-------------------------+
+|   Active Reward Terms   |
++-------+--------+--------+
+| Index | Name   | Weight |
++-------+--------+--------+
+|   0   | term_1 |     10 |
+|   1   | term_2 |      5 |
+|   2   | term_3 |    1.0 |
++-------+--------+--------+
+
+[2.755s] Simulation App Startup Complete
+2024-08-21 14:28:12 [3,683ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:28:12 [3,686ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_active_terms (__main__.TestRewardManager)
+Test the correct reading of active terms. ... ok
+test_compute (__main__.TestRewardManager)
+Test the computation of reward. ... ok
+test_config_equivalence (__main__.TestRewardManager)
+Test the equivalence of reward manager created from different config types. ... ok
+test_invalid_reward_config (__main__.TestRewardManager)
+Test the handling of invalid reward function's config parameters. ... ok
+test_invalid_reward_func_module (__main__.TestRewardManager)
+Test the handling of invalid reward function's module in string representation. ... ok
+test_missing_weight (__main__.TestRewardManager)
+Test the missing of weight in the config. ... ok
+test_str (__main__.TestRewardManager)
+Test the string representation of the reward manager. ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.024s
+
+OK
+
+[INFO] Time elapsed: 3.99 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/managers/test_reward_manager.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/markers/test_visualization_markers.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142812.log
+2024-08-21 14:28:12 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.031s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.308s] [ext: omni.stats-1.0.1] startup
+[0.309s] [ext: omni.client-1.1.0] startup
+[0.329s] [ext: omni.assets.plugins-0.0.0] startup
+[0.330s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.337s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.353s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59574
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:28:13 [745ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.868s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.869s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.870s] [ext: omni.pip.compute-1.4.0] startup
+[0.870s] [ext: omni.pip.cloud-1.1.3] startup
+[0.873s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.873s] [ext: omni.mtlx-0.1.0] startup
+[0.874s] [ext: omni.usd.config-1.0.4] startup
+[0.876s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.877s] [ext: omni.usd.libs-1.0.1] startup
+[0.947s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.948s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.965s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.965s] [ext: omni.appwindow-1.1.8] startup
+[0.967s] [ext: omni.kit.renderer.core-1.0.1] startup
+[1.019s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[1.022s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.152s] [ext: omni.ui-2.23.11] startup
+[1.161s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.162s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.240s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.242s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.248s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.279s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.279s] [ext: omni.graph.exec-0.9.3] startup
+[1.280s] [ext: omni.usd_resolver-1.0.0] startup
+[1.283s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.284s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.285s] [ext: omni.usd.core-1.2.11] startup
+[1.288s] [ext: omni.kit.commands-1.4.9] startup
+[1.291s] [ext: omni.activity.core-1.0.1] startup
+[1.292s] [ext: omni.timeline-1.0.10] startup
+[1.293s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.298s] [ext: omni.kvdb-106.0.20] startup
+[1.299s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.300s] [ext: omni.localcache-106.0.20] startup
+[1.301s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.305s] [ext: omni.usdphysics-106.0.20] startup
+[1.307s] [ext: omni.physx.foundation-106.0.20] startup
+[1.307s] [ext: carb.audio-0.1.0] startup
+[1.309s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.343s] [ext: omni.physx.cooking-106.0.20] startup
+[1.350s] [ext: omni.datastore-0.0.0] startup
+[1.350s] [ext: omni.blobkey-1.1.0] startup
+[1.350s] [ext: omni.ujitso.default-1.0.0] startup
+[1.352s] [ext: omni.hsscclient-0.0.0] startup
+[1.353s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.354s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.370s] [ext: omni.physx-106.0.20] startup
+[1.383s] [ext: omni.usd-1.11.2] startup
+[1.412s] [ext: omni.physics.tensors-106.0.20] startup
+[1.489s] [ext: omni.physx.tensors-106.0.20] startup
+[1.493s] [ext: omni.physx.fabric-106.0.20] startup
+[1.498s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.525s] [ext: omni.isaac.version-1.1.0] startup
+[1.527s] [ext: omni.warp.core-1.2.1] startup
+[1.627s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.629s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.630s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.632s] [ext: omni.isaac.core-3.18.1] startup
+[2.535s] [ext: omni.kit.window.title-1.1.3] startup
+[2.536s] [ext: omni.isaac.kit-1.13.0] startup
+[2.537s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.537s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.538s] Simulation App Starting
+[2.662s] app ready
+[2.820s] Simulation App Startup Complete
+2024-08-21 14:28:15 [3,321ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPreviewSurface.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdUVTexture.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float2.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float3.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_float4.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_int.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_string.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_normal.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_point.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_vector.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdPrimvarReader_matrix.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:15 [3,322ms] [Warning] [omni.usd] Warning: in GetNodeDiscoveryResults at line 136 of /buildAgent/work/ac88d7d902b57417/USD/pxr/usd/usdShade/shaderDefUtils.cpp -- Unable to resolve info:sourceAsset </UsdTransform2d.info:mdl:sourceAsset> with value @UsdPreviewSurface.mdl@.
+
+2024-08-21 14:28:16 [3,639ms] [Warning] [omni.usd] Unexpected reference count of 2 for UsdStage 'anon:0x107ee570:World2.usd' while being closed in UsdContext (this may indicate it is still resident in memory).
+2024-08-21 14:28:19 [7,005ms] [Warning] [omni.usd] Unexpected reference count of 2 for UsdStage 'anon:0x1916e2c0:World3.usd' while being closed in UsdContext (this may indicate it is still resident in memory).
+2024-08-21 14:28:19 [7,358ms] [Warning] [omni.usd] Unexpected reference count of 2 for UsdStage 'anon:0x13978ad0:World4.usd' while being closed in UsdContext (this may indicate it is still resident in memory).
+2024-08-21 14:28:20 [7,487ms] [Warning] [omni.usd] Unexpected reference count of 2 for UsdStage 'anon:0x457f760:World5.usd' while being closed in UsdContext (this may indicate it is still resident in memory).
+2024-08-21 14:28:20 [7,617ms] [Warning] [omni.usd] Unexpected reference count of 2 for UsdStage 'anon:0x19fc5a50:World6.usd' while being closed in UsdContext (this may indicate it is still resident in memory).
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+VisualizationMarkers(prim_path=/World/Visuals/test)
+	Count: 1
+	Number of prototypes: 1
+	Markers Prototypes:
+		[Index: 0]: test: {'func': 'omni.isaac.lab.sim.spawners.shapes.shapes:spawn_sphere', 'visible': True, 'semantic_tags': None, 'copy_from_source': True, 'mass_props': None, 'rigid_props': None, 'collision_props': None, 'activate_contact_sensors': False, 'visual_material_path': 'material', 'visual_material': None, 'physics_material_path': 'material', 'physics_material': None, 'radius': 1.0}
+Marker visualization with explicit indices : 0.000198 seconds
+Marker visualization with no indices : 0.000077 seconds
+Marker visualization : 0.000205 seconds
+Marker no visualization : 0.000009 seconds
+2024-08-21 14:28:20 [7,673ms] [Warning] [omni.physx.plugin] Detach stage failed!
+2024-08-21 14:28:20 [7,905ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:28:20 [7,908ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_instantiation (__main__.TestUsdVisualizationMarkers)
+Test that the class can be initialized properly. ... ok
+test_multiple_prototypes_marker (__main__.TestUsdVisualizationMarkers)
+Test with multiple prototypes of spheres. ... ok
+test_usd_marker (__main__.TestUsdVisualizationMarkers)
+Test with marker from a USD. ... ok
+test_usd_marker_color (__main__.TestUsdVisualizationMarkers)
+Test with marker from a USD with its color modified. ... ok
+test_visualization_time_based_on_prototypes (__main__.TestUsdVisualizationMarkers)
+Test with time taken when number of prototypes is increased. ... ok
+test_visualization_time_based_on_visibility (__main__.TestUsdVisualizationMarkers)
+Test with visibility of markers. When invisible, the visualize call should return. ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.527s
+
+OK
+
+[INFO] Time elapsed: 8.21 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/markers/test_visualization_markers.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/performance/test_kit_startup_performance.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142820.log
+2024-08-21 14:28:20 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.031s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.308s] [ext: omni.stats-1.0.1] startup
+[0.309s] [ext: omni.client-1.1.0] startup
+[0.329s] [ext: omni.assets.plugins-0.0.0] startup
+[0.330s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.337s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.353s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59572
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:28:21 [751ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.874s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.875s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.876s] [ext: omni.pip.compute-1.4.0] startup
+[0.876s] [ext: omni.pip.cloud-1.1.3] startup
+[0.879s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.879s] [ext: omni.mtlx-0.1.0] startup
+[0.880s] [ext: omni.usd.config-1.0.4] startup
+[0.882s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.883s] [ext: omni.usd.libs-1.0.1] startup
+[0.959s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.959s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.977s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.978s] [ext: omni.appwindow-1.1.8] startup
+[0.980s] [ext: omni.kit.renderer.core-1.0.1] startup
+[1.015s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[1.017s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.146s] [ext: omni.ui-2.23.11] startup
+[1.156s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.157s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.233s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.235s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.241s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.272s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.272s] [ext: omni.graph.exec-0.9.3] startup
+[1.273s] [ext: omni.usd_resolver-1.0.0] startup
+[1.276s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.277s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.278s] [ext: omni.usd.core-1.2.11] startup
+[1.281s] [ext: omni.kit.commands-1.4.9] startup
+[1.284s] [ext: omni.activity.core-1.0.1] startup
+[1.285s] [ext: omni.timeline-1.0.10] startup
+[1.286s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.291s] [ext: omni.kvdb-106.0.20] startup
+[1.292s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.293s] [ext: omni.localcache-106.0.20] startup
+[1.294s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.298s] [ext: omni.usdphysics-106.0.20] startup
+[1.300s] [ext: omni.physx.foundation-106.0.20] startup
+[1.300s] [ext: carb.audio-0.1.0] startup
+[1.302s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.336s] [ext: omni.physx.cooking-106.0.20] startup
+[1.343s] [ext: omni.datastore-0.0.0] startup
+[1.343s] [ext: omni.blobkey-1.1.0] startup
+[1.343s] [ext: omni.ujitso.default-1.0.0] startup
+[1.345s] [ext: omni.hsscclient-0.0.0] startup
+[1.347s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.348s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.363s] [ext: omni.physx-106.0.20] startup
+[1.376s] [ext: omni.usd-1.11.2] startup
+[1.402s] [ext: omni.physics.tensors-106.0.20] startup
+[1.480s] [ext: omni.physx.tensors-106.0.20] startup
+[1.484s] [ext: omni.physx.fabric-106.0.20] startup
+[1.489s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.498s] [ext: omni.isaac.version-1.1.0] startup
+[1.499s] [ext: omni.warp.core-1.2.1] startup
+[1.594s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.596s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.596s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.599s] [ext: omni.isaac.core-3.18.1] startup
+[2.517s] [ext: omni.kit.window.title-1.1.3] startup
+[2.518s] [ext: omni.isaac.kit-1.13.0] startup
+[2.518s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.519s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.520s] Simulation App Starting
+[2.651s] app ready
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+[2.800s] Simulation App Startup Complete
+2024-08-21 14:28:23 [3,000ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:28:23 [3,003ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_kit_start_up_time (__main__.TestKitStartUpPerformance)
+Test kit start-up time. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.802s
+
+OK
+
+[INFO] Time elapsed: 3.30 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/performance/test_kit_startup_performance.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/performance/test_robot_load_performance.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142824.log
+2024-08-21 14:28:24 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.028s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.298s] [ext: omni.stats-1.0.1] startup
+[0.299s] [ext: omni.client-1.1.0] startup
+[0.320s] [ext: omni.assets.plugins-0.0.0] startup
+[0.320s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.327s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.343s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59569
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:28:24 [746ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.868s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.870s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.870s] [ext: omni.pip.compute-1.4.0] startup
+[0.870s] [ext: omni.pip.cloud-1.1.3] startup
+[0.873s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.873s] [ext: omni.mtlx-0.1.0] startup
+[0.874s] [ext: omni.usd.config-1.0.4] startup
+[0.876s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.877s] [ext: omni.usd.libs-1.0.1] startup
+[0.950s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.950s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.967s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.968s] [ext: omni.appwindow-1.1.8] startup
+[0.970s] [ext: omni.kit.renderer.core-1.0.1] startup
+[1.012s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[1.014s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.129s] [ext: omni.ui-2.23.11] startup
+[1.139s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.140s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.217s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.220s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.225s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.256s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.256s] [ext: omni.graph.exec-0.9.3] startup
+[1.257s] [ext: omni.usd_resolver-1.0.0] startup
+[1.260s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.261s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.263s] [ext: omni.usd.core-1.2.11] startup
+[1.265s] [ext: omni.kit.commands-1.4.9] startup
+[1.268s] [ext: omni.activity.core-1.0.1] startup
+[1.269s] [ext: omni.timeline-1.0.10] startup
+[1.270s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.275s] [ext: omni.kvdb-106.0.20] startup
+[1.276s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.277s] [ext: omni.localcache-106.0.20] startup
+[1.278s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.281s] [ext: omni.usdphysics-106.0.20] startup
+[1.283s] [ext: omni.physx.foundation-106.0.20] startup
+[1.284s] [ext: carb.audio-0.1.0] startup
+[1.285s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.319s] [ext: omni.physx.cooking-106.0.20] startup
+[1.325s] [ext: omni.datastore-0.0.0] startup
+[1.326s] [ext: omni.blobkey-1.1.0] startup
+[1.326s] [ext: omni.ujitso.default-1.0.0] startup
+[1.327s] [ext: omni.hsscclient-0.0.0] startup
+[1.329s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.330s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.346s] [ext: omni.physx-106.0.20] startup
+[1.358s] [ext: omni.usd-1.11.2] startup
+[1.383s] [ext: omni.physics.tensors-106.0.20] startup
+[1.466s] [ext: omni.physx.tensors-106.0.20] startup
+[1.470s] [ext: omni.physx.fabric-106.0.20] startup
+[1.475s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.499s] [ext: omni.isaac.version-1.1.0] startup
+[1.499s] [ext: omni.warp.core-1.2.1] startup
+[1.599s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.601s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.602s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.604s] [ext: omni.isaac.core-3.18.1] startup
+[2.512s] [ext: omni.kit.window.title-1.1.3] startup
+[2.514s] [ext: omni.isaac.kit-1.13.0] startup
+[2.514s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.514s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.515s] Simulation App Starting
+[2.638s] app ready
+[2.792s] Simulation App Startup Complete
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+Warp 1.2.1 initialized:
+   CUDA Toolkit 11.8, Driver 12.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4070 Ti" (12 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.2.1
+Cartpole load time for device cuda:0 : 4.425893 seconds
+Cartpole load time for device cpu : 2.990165 seconds
+Anymal_D load time for device cuda:0 : 19.416119 seconds
+Anymal_D load time for device cpu : 16.540228 seconds
+2024-08-21 14:29:16 [52,036ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:29:16 [52,079ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_robot_load_performance (__main__.TestRobotLoadPerformance)
+Test robot load time. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 47.824s
+
+OK
+
+[INFO] Time elapsed: 52.47 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/performance/test_robot_load_performance.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/scene/test_interactive_scene.py'
+
+Loading user config located at: '/isaac-sim/kit/data/Kit/Isaac-Sim/4.1/user.config.json'
+[Info] [carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.1/kit_20240821_142916.log
+2024-08-21 14:29:16 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.030s] [ext: omni.kit.async_engine-0.0.0] startup
+[0.301s] [ext: omni.stats-1.0.1] startup
+[0.302s] [ext: omni.client-1.1.0] startup
+[0.323s] [ext: omni.assets.plugins-0.0.0] startup
+[0.323s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.331s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.347s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 535.183.01    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4070 Ti       | Yes: 0 |     | 12282   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2782      | 4c8d6c0e.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.3 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.3, Kernel: 5.15.0-117-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12013000 (1.20.13.0)
+| Processor: 13th Gen Intel(R) Core(TM) i9-13900 | Cores: 24 | Logical: 48
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 63975 | Free Memory: 59573
+| Total Page/Swap (MB): 7615 | Free Page/Swap: 7615
+|---------------------------------------------------------------------------------------------|
+2024-08-21 14:29:17 [733ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+[0.857s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.859s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.859s] [ext: omni.pip.compute-1.4.0] startup
+[0.860s] [ext: omni.pip.cloud-1.1.3] startup
+[0.862s] [ext: omni.isaac.core_archive-2.3.0] startup
+[0.862s] [ext: omni.mtlx-0.1.0] startup
+[0.863s] [ext: omni.usd.config-1.0.4] startup
+[0.865s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[0.866s] [ext: omni.usd.libs-1.0.1] startup
+[0.919s] [ext: omni.isaac.ml_archive-2.0.1] startup
+[0.920s] [ext: omni.kit.telemetry-0.5.0] startup
+[0.938s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.938s] [ext: omni.appwindow-1.1.8] startup
+[0.940s] [ext: omni.kit.renderer.core-1.0.1] startup
+[0.961s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[0.963s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.099s] [ext: omni.ui-2.23.11] startup
+[1.109s] [ext: omni.kit.mainwindow-1.0.3] startup
+[1.110s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.187s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.189s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.195s] [ext: omni.usd.schema.physx-106.0.20] startup
+[1.226s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.226s] [ext: omni.graph.exec-0.9.3] startup
+[1.227s] [ext: omni.usd_resolver-1.0.0] startup
+[1.230s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.231s] [ext: omni.kit.exec.core-0.13.2] startup
+[1.233s] [ext: omni.usd.core-1.2.11] startup
+[1.235s] [ext: omni.kit.commands-1.4.9] startup
+[1.238s] [ext: omni.activity.core-1.0.1] startup
+[1.239s] [ext: omni.timeline-1.0.10] startup
+[1.240s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.245s] [ext: omni.kvdb-106.0.20] startup
+[1.246s] [ext: omni.resourcemonitor-105.0.1] startup
+[1.247s] [ext: omni.localcache-106.0.20] startup
+[1.248s] [ext: omni.convexdecomposition-106.0.20] startup
+[1.252s] [ext: omni.usdphysics-106.0.20] startup
+[1.254s] [ext: omni.physx.foundation-106.0.20] startup
+[1.254s] [ext: carb.audio-0.1.0] startup
+[1.256s] [ext: usdrt.scenegraph-7.4.8] startup
+[1.290s] [ext: omni.physx.cooking-106.0.20] startup
+[1.296s] [ext: omni.datastore-0.0.0] startup
+[1.297s] [ext: omni.blobkey-1.1.0] startup
+[1.297s] [ext: omni.ujitso.default-1.0.0] startup
+[1.298s] [ext: omni.hsscclient-0.0.0] startup
+[1.300s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.301s] [ext: omni.hydra.usdrt_delegate-7.4.7] startup
+[1.318s] [ext: omni.physx-106.0.20] startup
+[1.331s] [ext: omni.usd-1.11.2] startup
+[1.366s] [ext: omni.physics.tensors-106.0.20] startup
+[1.425s] [ext: omni.physx.tensors-106.0.20] startup
+[1.430s] [ext: omni.physx.fabric-106.0.20] startup
+[1.435s] [ext: omni.kit.usd.layers-2.1.31] startup
+[1.455s] [ext: omni.isaac.version-1.1.0] startup
+[1.456s] [ext: omni.warp.core-1.2.1] startup
+[1.555s] [ext: omni.physx.stageupdate-106.0.20] startup
+[1.558s] [ext: omni.isaac.nucleus-0.3.0] startup
+[1.558s] [ext: omni.kit.primitive.mesh-1.0.16] startup
+[1.561s] [ext: omni.isaac.core-3.18.1] startup
+[2.470s] [ext: omni.kit.window.title-1.1.3] startup
+[2.472s] [ext: omni.isaac.kit-1.13.0] startup
+[2.472s] [ext: omni.isaac.cloner-0.8.1] startup
+[2.472s] [ext: isaaclab.python.headless-1.1.0] startup
+[2.473s] Simulation App Starting
+[2.596s] app ready
+[2.752s] Simulation App Startup Complete
+[INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit
+Starting kit application with the following args:  ['/workspace/isaaclab/_isaac_sim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/workspace/isaaclab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.kit', '--/app/tokens/exe-path=/workspace/isaaclab/_isaac_sim/kit', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/workspace/isaaclab/_isaac_sim/exts', '--ext-folder', '/workspace/isaaclab/_isaac_sim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True', '--allow-root']
+Passing the following args to the base kit application:  []
+Warp 1.2.1 initialized:
+   CUDA Toolkit 11.8, Driver 12.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4070 Ti" (12 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /root/.cache/warp/1.2.1
+2024-08-21 14:29:21 [5,254ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2024-08-21 14:29:21 [5,257ms] [Warning] [omni.core.ITypeFactory] Module /isaac-sim/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+
+test_scene_entity_isolation (__main__.TestInteractiveScene)
+Tests that multiple instances of InteractiveScene does not share any data. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.706s
+
+OK
+
+[INFO] Time elapsed: 5.56 s
+[INFO] Result '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/scene/test_interactive_scene.py': PASSED
+
+------------------------------------------------------------
+
+[INFO] Running '/workspace/isaaclab/source/extensions/omni.isaac.lab/test/sensors/test_camera.py'
+
