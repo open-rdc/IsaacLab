@@ -184,21 +184,21 @@ class EventCfg:
         },
     )
 
-    reset_base = EventTerm(
-        func=mdp.reset_root_state_uniform,
-        mode="reset",
-        params={
-            "pose_range": {"x": (-0.5, 0.5), "y": (-0.5, 0.5), "yaw": (-3.14, 3.14)},
-            "velocity_range": {
-                "x": (-0.5, 0.5),
-                "y": (-0.5, 0.5),
-                "z": (-0.5, 0.5),
-                "roll": (-0.5, 0.5),
-                "pitch": (-0.5, 0.5),
-                "yaw": (-0.5, 0.5),
-            },
-        },
-    )
+#    reset_base = EventTerm(
+#        func=mdp.reset_root_state_uniform,
+#        mode="reset",
+#        params={
+#            "pose_range": {"x": (-0.5, 0.5), "y": (-0.5, 0.5), "yaw": (-3.14, 3.14)},
+#            "velocity_range": {
+#                "x": (-0.5, 0.5),
+#                "y": (-0.5, 0.5),
+#                "z": (-0.5, 0.5),
+#                "roll": (-0.5, 0.5),
+#                "pitch": (-0.5, 0.5),
+#                "yaw": (-0.5, 0.5),
+#            },
+#        },
+#    )
 
     reset_robot_joints = EventTerm(
         func=mdp.reset_joints_by_scale,
