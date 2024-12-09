@@ -128,6 +128,49 @@ def main():
             obs, reward, done, info = env.step(actions)
             current_time = time.time()
             
+            policy_tensor = info["observations"]["policy"]
+
+            for agent_id, observation in enumerate(policy_tensor):
+                # 実際の速度 (x, y)
+                actual_velocity = observation[0:2]  # base_lin_vel の x, y
+                # 目標速度 (x, y)
+                target_velocity = observation[9:11]  # velocity_commands の x, y
+
+                # z軸の値 (observationsから取得)
+                actual_z = observation[3]  # base_lin_vel の z 軸成分
+                target_z = observation[12]  # velocity_commands の z 軸成分
+
+                # 実際の速度と目標速度の大きさ（スカラー）
+                actual_speed = torch.norm(actual_velocity)
+                target_speed = torch.norm(target_velocity)
+
+                # 目標値に対する追従率（%）
+                follow_ratio = (actual_speed / target_speed * 100) if target_speed > 0 else 0.0
+
+                # 実際の速度と目標速度の差（スカラー）
+                speed_difference = actual_speed - target_speed
+
+                # z軸成分を用いた角度追従率（%）
+                if target_z == 0:  # 目標zが正面方向（0）の場合
+                    # 実際の速度方向を単位ベクトルに変換
+                    actual_direction = actual_velocity / (torch.norm(actual_velocity) + 1e-6)
+                    # 正面方向（目標方向）を単位ベクトルとして設定
+                    target_direction = torch.tensor([1.0, 0.0], device=actual_velocity.device)  # 正面方向
+                    # 内積を用いて角度誤差を計算
+                    dot_product = torch.dot(actual_direction, target_direction)
+                    angle_error = torch.acos(dot_product.clip(-1.0, 1.0))  # -1～1にクリップ
+                    # 角度追従率を計算（180度を最大誤差とする）
+                    z_follow_ratio = (1 - angle_error / torch.pi) * 100
+                else:
+                    # 通常の方法で追従率を計算
+                    z_follow_ratio = (1 - abs(actual_z - target_z) / abs(target_z)) * 100
+                    z_follow_ratio = max(z_follow_ratio, 0)  # 下限を0に設定
+
+                print(f"Agent {agent_id}:")
+                print(f"  X-axis: Speed Follow Ratio = {follow_ratio:.2f} %")
+                print(f"  Y-axis: Speed Difference = {speed_difference:.3f}")
+                print(f"  Z-axis: Z-Axis Follow Ratio = {z_follow_ratio:.2f} %\n")
+                                             
             if current_time - last_checkpoint_time >= 10:
                 elapsed_time = current_time - start_time
                 print(f"[INFO] Elapsed time: {elapsed_time:.2f} seconds.")
