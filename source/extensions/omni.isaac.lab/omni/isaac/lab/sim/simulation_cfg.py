@@ -126,7 +126,7 @@ class PhysxCfg:
     This is used for the found/lost pair reports in AABB manager.
     """
 
-    gpu_total_aggregate_pairs_capacity: int = 2**21
+    gpu_total_aggregate_pairs_capacity: int = 2**23
     """Capacity of total number of aggregate pairs allocated in GPU global memory. Default is 2 ** 21."""
 
     gpu_collision_stack_size: int = 2**26
