@@ -10,8 +10,8 @@ import omni.isaac.lab.terrains as terrain_gen
 from ..terrain_generator_cfg import TerrainGeneratorCfg
 
 ROUGH_TERRAINS_CFG = TerrainGeneratorCfg(
-    size=(164.75, 82.25),
-    border_width=20.0,
+    size=(70.0, 70.0),
+    border_width=0.0,
     num_rows=1,
     num_cols=1,
     horizontal_scale=0.1,
