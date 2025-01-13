@@ -8,7 +8,7 @@
 """Launch Isaac Sim Simulator first."""
 
 import argparse
-import time
+
 from omni.isaac.lab.app import AppLauncher
 
 # local imports
@@ -41,7 +41,9 @@ simulation_app = app_launcher.app
 import gymnasium as gym
 import os
 import torch
+import time
 
+from torch.utils.tensorboard import SummaryWriter
 from rsl_rl.runners import OnPolicyRunner
 
 from omni.isaac.lab.envs import DirectMARLEnv, multi_agent_to_single_agent
@@ -55,6 +57,11 @@ from omni.isaac.lab_tasks.utils.wrappers.rsl_rl import (
     export_policy_as_jit,
     export_policy_as_onnx,
 )
+
+# ログディレクトリの作成
+log_dir = os.path.join("logs", "play_metrics/2025-01-10_05-40-41e10v15flat")
+os.makedirs(log_dir, exist_ok=True)
+writer = SummaryWriter(log_dir=log_dir)
 
 
 def main():
@@ -110,102 +117,157 @@ def main():
         ppo_runner.alg.actor_critic, normalizer=ppo_runner.obs_normalizer, path=export_model_dir, filename="policy.onnx"
     )
 
-    # reset environment
+
     obs, _ = env.get_observations()
-    timestep = 0
-    removed_agents = set()
-    removed_agents_count = 0
-    total_agents = env.num_envs
     start_time = time.time()
-    last_checkpoint_time = start_time
-    # simulate environment
+    removed_agents = set()  # 転倒したエージェントを追跡
+    removed_agents_count = 0
+    total_agents = env.num_envs  # 全エージェント数
+    follow_ratios_x = []  # X軸の追従率を記録
+    follow_ratios_z = []  # Z軸の追従率を記録
+    speed_differences = []  # 速度差の記録
+
+    timestep = 0
+    last_log_time = start_time
+    fall_time_buffer = 4.0  # 転倒直前4秒分のデータを除外
+    agent_last_fall_time = [None] * total_agents  # エージェントごとの最後の転倒時間を記録
+
+    # 速度変化を記録するための初期速度
+    previous_velocities = torch.zeros((total_agents, 3), device=obs.device)
+    no_movement_start_time = [None] * total_agents  # 動きが停止した開始時刻を記録
+
     while simulation_app.is_running():
-        # run everything in inference mode
         with torch.inference_mode():
-            # agent stepping
             actions = policy(obs)
-            # env stepping
             obs, reward, done, info = env.step(actions)
             current_time = time.time()
-            
-            policy_tensor = info["observations"]["policy"]
 
-            # 転倒エージェントの判定と追跡
+            # 転倒エージェントの記録
             for idx, is_done in enumerate(done):
                 if is_done and idx not in removed_agents:
                     removed_agents.add(idx)
                     removed_agents_count += 1
-                    print(f"[INFO] Agent {idx} has fallen. Total fallen: {removed_agents_count}")
+                    agent_last_fall_time[idx] = current_time
 
-            # 全エージェントが転倒した場合
+            # 転倒したエージェントの速度変化を確認し記録
+            for idx in range(total_agents):
+                if idx not in removed_agents:
+                    actual_velocity = obs[idx, 0:3]  # 実際の速度 (x, y, z)
+                    velocity_change = torch.abs(actual_velocity - previous_velocities[idx])
+
+                    if velocity_change[0].item() < 0.1 and velocity_change[2].item() < 0.1:
+                        if no_movement_start_time[idx] is None:
+                            no_movement_start_time[idx] = current_time
+                        elif current_time - no_movement_start_time[idx] >= 5.0:  # 5秒間変化しない場合
+                            removed_agents.add(idx)
+                            removed_agents_count += 1
+                            agent_last_fall_time[idx] = current_time
+                    else:
+                        no_movement_start_time[idx] = None
+
+                    previous_velocities[idx] = actual_velocity
+
+
+            # 転倒したエージェント数をログに記録
+            elapsed_time = current_time - start_time
+            writer.add_scalar("Metrics/Fallen_Agents", removed_agents_count, elapsed_time)
+
+            # 各エージェントの追従率と速度差を計算
+            step_follow_ratios_x = []
+            step_follow_ratios_z = []
+            step_speed_differences = []
+            policy_tensor = info["observations"]["policy"]
+            for agent_id, observation in enumerate(policy_tensor):
+                # 転倒したエージェントや転倒直前4秒分のデータを除外
+                if agent_id in removed_agents or (
+                    agent_last_fall_time[agent_id] is not None and current_time - agent_last_fall_time[agent_id] <= fall_time_buffer
+                ):
+                    continue
+
+                # 実際の速度と目標速度の取得
+                actual_velocity = observation[0:2]  # 実際の速度 (x, y)
+                target_velocity = observation[9:11]  # 目標速度 (x, y)
+                actual_speed = torch.norm(actual_velocity)  # 実際の速度の大きさ
+                target_speed = torch.norm(target_velocity)  # 目標速度の大きさ
+
+                # x軸での追従率の計算
+                follow_ratio_x = (actual_speed / target_speed * 100) if target_speed > 0 else 0.0
+                step_follow_ratios_x.append(follow_ratio_x)
+
+                # y軸での速度差の計算
+                speed_difference = actual_speed - target_speed
+                step_speed_differences.append(speed_difference)
+
+                # z軸の追従率計算
+                actual_z = observation[5]  # 実際のz軸速度
+                target_z = observation[11]  # 目標z軸速度
+                z_range = 3.14159  # ±πの範囲
+                z_deviation = abs((actual_z - target_z + z_range) % (2 * z_range) - z_range)  # 周期的な差を考慮
+                z_follow_ratio = (1 - z_deviation / z_range) * 100
+                z_follow_ratio = max(z_follow_ratio, 0)  # 負の値が発生しないように制限
+                step_follow_ratios_z.append(z_follow_ratio)
+
+            # 各ステップの平均を記録
+            if step_follow_ratios_x:
+                avg_follow_ratio_x = sum(step_follow_ratios_x) / len(step_follow_ratios_x)
+                follow_ratios_x.append(avg_follow_ratio_x)
+                writer.add_scalar("Metrics/Average_Follow_Ratio_X", avg_follow_ratio_x, elapsed_time - 10)  # 10秒遅延
+
+            if step_follow_ratios_z:
+                avg_follow_ratio_z = sum(step_follow_ratios_z) / len(step_follow_ratios_z)
+                follow_ratios_z.append(avg_follow_ratio_z)
+                writer.add_scalar("Metrics/Average_Follow_Ratio_Z", avg_follow_ratio_z, elapsed_time - 10)  # 10秒遅延
+
+            if step_speed_differences:
+                avg_speed_difference = sum(step_speed_differences) / len(step_speed_differences)
+                speed_differences.append(avg_speed_difference)
+                writer.add_scalar("Metrics/Average_Speed_Difference", avg_speed_difference, elapsed_time - 10)  # 10秒遅延
+
+            # 10ステップごとの追従率と速度差の履歴を記録
+            if timestep % 10 == 0:
+                valid_follow_ratios_x = [val for val, agent_id in zip(follow_ratios_x[-10:], range(total_agents))
+                                         if agent_id not in removed_agents]
+                if valid_follow_ratios_x:
+                    x_time_based_histogram = torch.tensor(valid_follow_ratios_x).mean()
+                    writer.add_histogram("Metrics/Follow_Ratio_X_Time_Based", x_time_based_histogram, elapsed_time - 10)
+
+                valid_follow_ratios_z = [val for val, agent_id in zip(follow_ratios_z[-10:], range(total_agents))
+                                         if agent_id not in removed_agents]
+                if valid_follow_ratios_z:
+                    z_time_based_histogram = torch.tensor(valid_follow_ratios_z).mean()
+                    writer.add_histogram("Metrics/Follow_Ratio_Z_Time_Based", z_time_based_histogram, elapsed_time - 10)
+
+                valid_speed_differences = [val for val, agent_id in zip(speed_differences[-10:], range(total_agents))
+                                           if agent_id not in removed_agents]
+                if valid_speed_differences:
+                    avg_speed_diff_histogram = torch.tensor(valid_speed_differences).mean()
+                    writer.add_histogram("Metrics/Speed_Difference_Distribution", avg_speed_diff_histogram, elapsed_time - 10)
+
+            timestep += 1
+
+
+            # 全エージェントが転倒した場合、シミュレーションを終了
             if removed_agents_count == total_agents:
-                elapsed_time = current_time - start_time
                 print(f"[INFO] All agents have fallen at {elapsed_time:.2f} seconds.")
                 break
 
-            # 各エージェントの追従率計算
-            policy_tensor = info["observations"]["policy"]
-            for agent_id, observation in enumerate(policy_tensor):
-                if agent_id in removed_agents:
-                    continue  # 転倒エージェントはスキップ
-
-                # 実際の速度 (x, y)
-                actual_velocity = observation[0:2]  # base_lin_vel の x, y
-                # 目標速度 (x, y)
-                target_velocity = observation[9:11]  # velocity_commands の x, y
-
-                # z軸の値
-                actual_z = observation[5]  # base_lin_vel の z 軸成分
-                target_z = observation[11]  # velocity_commands の z 軸成分
-
-                # 実際の速度と目標速度の大きさ（スカラー）
-                actual_speed = torch.norm(actual_velocity)
-                target_speed = torch.norm(target_velocity)
-
-                # 追従率計算（x, y 軸）
-                follow_ratio = (actual_speed / target_speed * 100) if target_speed > 0 else 0.0
-
-                # 速度の差（スカラー）
-                speed_difference = actual_speed - target_speed
-
-                # z軸の追従率計算
-                if target_z == 0:
-                    actual_direction = actual_velocity / (torch.norm(actual_velocity) + 1e-6)
-                    target_direction = torch.tensor([1.0, 0.0], device=actual_velocity.device)
-                    dot_product = torch.dot(actual_direction, target_direction)
-                    angle_error = torch.acos(dot_product.clip(-1.0, 1.0))
-                    z_follow_ratio = (1 - angle_error / torch.pi) * 100
-                else:
-                    z_follow_ratio = (1 - abs(actual_z - target_z) / abs(target_z)) * 100
-                    z_follow_ratio = max(z_follow_ratio, 0)
-
-                # 結果の表示
-                print(f"Agent {agent_id}:")
-                print(f"  X-axis: Speed Follow Ratio = {follow_ratio:.2f} %")
-                print(f"  Y-axis: Speed Difference = {speed_difference:.3f}")
-                print(f"  Z-axis: Z-Axis Follow Ratio = {z_follow_ratio:.2f} %\n")
-
-            # 10秒ごとの時間表示
-            if current_time - last_checkpoint_time >= 10:
-                elapsed_time = current_time - start_time
+            # 10秒ごとに経過時間をログに出力
+            if current_time - last_log_time >= 10:
                 print(f"[INFO] Elapsed time: {elapsed_time:.2f} seconds.")
-                last_checkpoint_time = current_time
+                last_log_time = current_time
+
+            # 転倒したエージェントのアクションをゼロに設定
             for idx in removed_agents:
-               actions[idx] = 0
+                actions[idx] = 0
+
             obs, reward, done, info = env.step(actions)
-            
-        if args_cli.video:
-            timestep += 1
-            # Exit the play loop after recording one video
-            if timestep == args_cli.video_length:
-                break
 
-    # close the simulator
+    # 環境とログライターをクローズ
     env.close()
-
+    writer.close()
 
 if __name__ == "__main__":
-    # run the main function
     main()
-    # close sim app
     simulation_app.close()
+
+
