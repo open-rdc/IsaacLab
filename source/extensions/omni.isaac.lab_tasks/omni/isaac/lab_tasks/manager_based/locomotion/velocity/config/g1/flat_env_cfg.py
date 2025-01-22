@@ -33,12 +33,20 @@ class G1FlatEnvCfg(G1RoughEnvCfg):
         self.rewards.feet_air_time.params["threshold"] = 0.4
         self.rewards.dof_torques_l2.weight = -2.0e-6
         self.rewards.dof_torques_l2.params["asset_cfg"] = SceneEntityCfg(
-            "robot", joint_names=[".*_hip_.*", ".*_knee_joint"]
+            "robot", 
+            joint_names=[
+                    ".*r_waist_roll",
+                    ".*r_waist_pitch",
+                    ".*r_knee_pitch",
+                    ".*l_waist_roll",
+                    ".*l_waist_pitch",
+                    ".*l_knee_pitch",
+            ],
         )
         # Commands
-        self.commands.base_velocity.ranges.lin_vel_x = (0.0, 1.0)
-        self.commands.base_velocity.ranges.lin_vel_y = (-0.5, 0.5)
-        self.commands.base_velocity.ranges.ang_vel_z = (-1.0, 1.0)
+        self.commands.base_velocity.ranges.lin_vel_x = (0.0, 0.5)
+        self.commands.base_velocity.ranges.lin_vel_y = (0.0, 0.0)
+        self.commands.base_velocity.ranges.ang_vel_z = (0.0, 0.0)
 
 
 class G1FlatEnvCfg_PLAY(G1FlatEnvCfg):

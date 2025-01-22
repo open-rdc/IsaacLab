@@ -404,7 +404,7 @@ G1_MINIMAL_CFG.spawn.usd_path = f"{ISAACLAB_NUCLEUS_DIR}/Robots/Unitree/G1/g1_mi
 This configuration removes most collision meshes to speed up simulation.
 """
 
-RDCLab_bidedal_robot_CFG = ArticulationCfg(
+RDCLab_bipedal_robot_CFG = ArticulationCfg(
     spawn=sim_utils.UsdFileCfg(
         usd_path=f"/workspace/isaaclab/source/extensions/omni.isaac.lab_assets/data/Robots/RDCLab/rdclab_bipedal_robot.usd",
         activate_contact_sensors=True,
@@ -452,8 +452,7 @@ RDCLab_bidedal_robot_CFG = ArticulationCfg(
         ),
     },
 )
-"""Configuration for the RDCLab bidedal robot."""
+"""Configuration for the RDCLab bipedal robot."""
 
-
-RDCLab_bidedal_robot_MINIMAL_CFG = RDCLab_bidedal_robot_CFG.copy()
-RDCLab_bidedal_robot_MINIMAL_CFG.spawn.usd_path = f"/workspace/isaaclab/source/extensions/omni.isaac.lab_assets/data/Robots/RDCLab/rdclab_bipedal_robot.usd"
+#RDCLab_bidedal_robot_MINIMAL_CFG = RDCLab_bipedal_robot_CFG.copy()
+#RDCLab_bidedal_robot_MINIMAL_CFG.spawn.usd_path = f"/workspace/isaaclab/source/extensions/omni.isaac.lab_assets/data/Robots/RDCLab/rdclab_bipedal_robot_minimal.usd"

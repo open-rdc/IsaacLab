@@ -43,7 +43,7 @@ from omni.isaac.lab.sim import SimulationContext
 from omni.isaac.lab_assets.cassie import CASSIE_CFG  # isort:skip
 from omni.isaac.lab_assets import H1_CFG  # isort:skip
 from omni.isaac.lab_assets import G1_CFG  # isort:skip
-from omni.isaac.lab_assets import RDCLab_bidedal_robot_CFG
+from omni.isaac.lab_assets import RDCLab_bipedal_robot_CFG
 
 def main():
     """Main function."""
@@ -73,7 +73,7 @@ def main():
     cassie = Articulation(CASSIE_CFG.replace(prim_path="/World/Cassie"))
     h1 = Articulation(H1_CFG.replace(prim_path="/World/H1"))
     g1 = Articulation(G1_CFG.replace(prim_path="/World/G1"))
-    rdclab_bipedal_robot = Articulation(RDCLab_bidedal_robot_CFG.replace(prim_path="/World/RDCLab_bidedal_robot"))
+    rdclab_bipedal_robot = Articulation(RDCLab_bipedal_robot_CFG.replace(prim_path="/World/RDCLab_bipedal_robot"))
     robots = [cassie, h1, g1, rdclab_bipedal_robot]
 
     # Play the simulator

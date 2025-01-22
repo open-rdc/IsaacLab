@@ -17,7 +17,8 @@ from omni.isaac.lab_tasks.manager_based.locomotion.velocity.velocity_env_cfg imp
 ##
 # Pre-defined configs
 ##
-from omni.isaac.lab_assets import G1_MINIMAL_CFG  # isort: skip
+#from omni.isaac.lab_assets import G1_MINIMAL_CFG  # isort: skip
+from omni.isaac.lab_assets import RDCLab_bipedal_robot_CFG
 
 
 @configclass
@@ -38,7 +39,7 @@ class G1Rewards(RewardsCfg):
         weight=0.25,
         params={
             "command_name": "base_velocity",
-            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*_ankle_roll_link"),
+            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*_kp2heel"),
             "threshold": 0.4,
         },
     )
@@ -46,61 +47,100 @@ class G1Rewards(RewardsCfg):
         func=mdp.feet_slide,
         weight=-0.1,
         params={
-            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*_ankle_roll_link"),
-            "asset_cfg": SceneEntityCfg("robot", body_names=".*_ankle_roll_link"),
+            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*_kp2heel"),
+            "asset_cfg": SceneEntityCfg("robot", body_names=".*_kp2heel"),
         },
     )
 
     # Penalize ankle joint limits
+    #dof_pos_limits = RewTerm(
+    #    func=mdp.joint_pos_limits,
+    #    weight=-1.0,
+    #    params={"asset_cfg": SceneEntityCfg("robot", joint_names=[".*_ankle_pitch_joint", ".*_ankle_roll_joint"])},
+    #)
+
+    # ジョイントリミット報酬の書き換え
     dof_pos_limits = RewTerm(
         func=mdp.joint_pos_limits,
         weight=-1.0,
-        params={"asset_cfg": SceneEntityCfg("robot", joint_names=[".*_ankle_pitch_joint", ".*_ankle_roll_joint"])},
+        params={
+            "asset_cfg": SceneEntityCfg(
+                "robot",
+                joint_names=[
+                    ".*r_waist_roll",
+                    ".*r_waist_pitch",
+                    ".*r_knee_pitch",
+                    ".*l_waist_roll",
+                    ".*l_waist_pitch",
+                    ".*l_knee_pitch",
+                ],
+            )
+        }
     )
+
     # Penalize deviation from default of the joints that are not essential for locomotion
-    joint_deviation_hip = RewTerm(
-        func=mdp.joint_deviation_l1,
-        weight=-0.1,
-        params={"asset_cfg": SceneEntityCfg("robot", joint_names=[".*_hip_yaw_joint", ".*_hip_roll_joint"])},
-    )
-    joint_deviation_arms = RewTerm(
+    #joint_deviation_hip = RewTerm(
+    #    func=mdp.joint_deviation_l1,
+    #    weight=-0.1,
+    #    params={"asset_cfg": SceneEntityCfg("robot", joint_names=[".*_hip_yaw_joint", ".*_hip_roll_joint"])},
+    #)
+    #joint_deviation_arms = RewTerm(
+    #    func=mdp.joint_deviation_l1,
+    #    weight=-0.1,
+    #    params={
+    #        "asset_cfg": SceneEntityCfg(
+    #            "robot",
+    #            joint_names=[
+    #                ".*_shoulder_pitch_joint",
+    #                ".*_shoulder_roll_joint",
+    #                ".*_shoulder_yaw_joint",
+    #                ".*_elbow_pitch_joint",
+    #                ".*_elbow_roll_joint",
+    #            ],
+    #        )
+    #    },
+    #)
+    #joint_deviation_fingers = RewTerm(
+    #    func=mdp.joint_deviation_l1,
+    #    weight=-0.05,
+    #    params={
+    #        "asset_cfg": SceneEntityCfg(
+    #            "robot",
+    #            joint_names=[
+    #                ".*_five_joint",
+    #                ".*_three_joint",
+    #                ".*_six_joint",
+    #                ".*_four_joint",
+    #                ".*_zero_joint",
+    #                ".*_one_joint",
+    #                ".*_two_joint",
+    #            ],
+    #        )
+    #    },
+    #)
+    #joint_deviation_torso = RewTerm(
+    #    func=mdp.joint_deviation_l1,
+    #    weight=-0.1,
+    #    params={"asset_cfg": SceneEntityCfg("robot", joint_names="torso_joint")},
+    #)
+    
+    # 腰・膝関節の標準姿勢からのズレをペナルティ
+    joint_deviation_legs = RewTerm(
         func=mdp.joint_deviation_l1,
         weight=-0.1,
         params={
             "asset_cfg": SceneEntityCfg(
                 "robot",
                 joint_names=[
-                    ".*_shoulder_pitch_joint",
-                    ".*_shoulder_roll_joint",
-                    ".*_shoulder_yaw_joint",
-                    ".*_elbow_pitch_joint",
-                    ".*_elbow_roll_joint",
+                    ".*r_waist_roll",
+                    ".*r_waist_pitch",
+                    ".*r_knee_pitch",
+                    ".*l_waist_roll",
+                    ".*l_waist_pitch",
+                    ".*l_knee_pitch",
                 ],
             )
         },
-    )
-    joint_deviation_fingers = RewTerm(
-        func=mdp.joint_deviation_l1,
-        weight=-0.05,
-        params={
-            "asset_cfg": SceneEntityCfg(
-                "robot",
-                joint_names=[
-                    ".*_five_joint",
-                    ".*_three_joint",
-                    ".*_six_joint",
-                    ".*_four_joint",
-                    ".*_zero_joint",
-                    ".*_one_joint",
-                    ".*_two_joint",
-                ],
-            )
-        },
-    )
-    joint_deviation_torso = RewTerm(
-        func=mdp.joint_deviation_l1,
-        weight=-0.1,
-        params={"asset_cfg": SceneEntityCfg("robot", joint_names="torso_joint")},
     )
 
 
@@ -111,7 +151,7 @@ class TerminationsCfg:
     time_out = DoneTerm(func=mdp.time_out, time_out=True)
     base_contact = DoneTerm(
         func=mdp.illegal_contact,
-        params={"sensor_cfg": SceneEntityCfg("contact_forces", body_names="torso_link"), "threshold": 1.0},
+        params={"sensor_cfg": SceneEntityCfg("contact_forces", body_names="base_link"), "threshold": 1.0},
     )
 
 
@@ -124,14 +164,16 @@ class G1RoughEnvCfg(LocomotionVelocityRoughEnvCfg):
         # post init of parent
         super().__post_init__()
         # Scene
-        self.scene.robot = G1_MINIMAL_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
-        self.scene.height_scanner.prim_path = "{ENV_REGEX_NS}/Robot/torso_link"
+        #self.scene.robot = RDCLab_bidedal_robot_MINIMAL_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
+        self.scene.robot = RDCLab_bipedal_robot_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
+        #/workspace/isaaclab/source/extensions/omni.isaac.lab_assets/data/Robots/RDCLab/rdclab_bipedal_robot.usd
+        self.scene.height_scanner.prim_path = "{ENV_REGEX_NS}/Robot/base_link"
 
         # Randomization
         self.events.push_robot = None
         self.events.add_base_mass = None
         self.events.reset_robot_joints.params["position_range"] = (1.0, 1.0)
-        self.events.base_external_force_torque.params["asset_cfg"].body_names = ["torso_link"]
+        self.events.base_external_force_torque.params["asset_cfg"].body_names = ["base_link"]
         self.events.reset_base.params = {
             "pose_range": {"x": (-0.5, 0.5), "y": (-0.5, 0.5), "yaw": (-3.14, 3.14)},
             "velocity_range": {
@@ -151,11 +193,27 @@ class G1RoughEnvCfg(LocomotionVelocityRoughEnvCfg):
         self.rewards.action_rate_l2.weight = -0.005
         self.rewards.dof_acc_l2.weight = -1.25e-7
         self.rewards.dof_acc_l2.params["asset_cfg"] = SceneEntityCfg(
-            "robot", joint_names=[".*_hip_.*", ".*_knee_joint"]
+            "robot",
+            joint_names=[
+                ".*r_waist_roll",
+                ".*r_waist_pitch",
+                ".*r_knee_pitch",
+                ".*l_waist_roll",
+                ".*l_waist_pitch",
+                ".*l_knee_pitch",
+            ]
         )
         self.rewards.dof_torques_l2.weight = -1.5e-7
         self.rewards.dof_torques_l2.params["asset_cfg"] = SceneEntityCfg(
-            "robot", joint_names=[".*_hip_.*", ".*_knee_joint", ".*_ankle_.*"]
+            "robot",
+            joint_names=[
+                ".*r_waist_roll",
+                ".*r_waist_pitch",
+                ".*r_knee_pitch",
+                ".*l_waist_roll",
+                ".*l_waist_pitch",
+                ".*l_knee_pitch",
+            ]
         )
 
         # Commands
