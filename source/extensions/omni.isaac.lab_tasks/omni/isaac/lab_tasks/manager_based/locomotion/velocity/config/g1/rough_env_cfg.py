@@ -39,16 +39,16 @@ class G1Rewards(RewardsCfg):
         weight=0.25,
         params={
             "command_name": "base_velocity",
-            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*_kp2heel"),
-            "threshold": 0.4,
+            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*_heel2end"),
+            "threshold": 0.1,
         },
     )
     feet_slide = RewTerm(
         func=mdp.feet_slide,
         weight=-0.1,
         params={
-            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*_kp2heel"),
-            "asset_cfg": SceneEntityCfg("robot", body_names=".*_kp2heel"),
+            "sensor_cfg": SceneEntityCfg("contact_forces", body_names=".*_heel2end"),
+            "asset_cfg": SceneEntityCfg("robot", body_names=".*_heel2end"),
         },
     )
 
@@ -151,7 +151,17 @@ class TerminationsCfg:
     time_out = DoneTerm(func=mdp.time_out, time_out=True)
     base_contact = DoneTerm(
         func=mdp.illegal_contact,
-        params={"sensor_cfg": SceneEntityCfg("contact_forces", body_names="base_link"), "threshold": 1.0},
+        params={"sensor_cfg": SceneEntityCfg("contact_forces", 
+            body_names=[
+                "base_link",
+                "r_wr2wp",
+                "r_wp2kp",
+                "r_kp2heel",
+                "l_wr2wp",
+                "l_wp2kp",
+                "l_kp2heel",
+            ]
+            ), "threshold": 1.0},
     )
 
 
