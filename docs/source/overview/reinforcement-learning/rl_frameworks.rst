@@ -1,3 +1,5 @@
+.. _rl-frameworks:
+
 Reinforcement Learning Library Comparison
 =========================================
 
@@ -25,7 +27,7 @@ Feature Comparison
      - Stable Baselines3
    * - Algorithms Included
      - PPO, SAC, A2C
-     - PPO
+     - PPO, Distillation
      - `Extensive List <https://skrl.readthedocs.io/en/latest/#agents>`__
      - `Extensive List <https://github.com/DLR-RM/stable-baselines3?tab=readme-ov-file#implemented-algorithms>`__
    * - Vectorized Training
@@ -35,7 +37,7 @@ Feature Comparison
      - No
    * - Distributed Training
      - Yes
-     - No
+     - Yes
      - Yes
      - No
    * - ML Frameworks Supported
@@ -69,17 +71,26 @@ Training Performance
 --------------------
 
 We performed training with each RL library on the same ``Isaac-Humanoid-v0`` environment
-with ``--headless`` on a single RTX 4090 GPU
-and logged the total training time for 65.5M steps for each RL library.
+with ``--headless`` on a single NVIDIA GeForce RTX 4090 and logged the total training time
+for 65.5M steps (4096 environments x 32 rollout steps x 500 iterations).
 
 +--------------------+-----------------+
 | RL Library         | Time in seconds |
 +====================+=================+
-| RL-Games           | 216             |
+| RL-Games           | 201             |
 +--------------------+-----------------+
-| RSL RL             | 215             |
+| SKRL               | 201             |
 +--------------------+-----------------+
-| SKRL               | 321             |
+| RSL RL             | 198             |
 +--------------------+-----------------+
-| Stable-Baselines3  | 6320            |
+| Stable-Baselines3  | 287             |
 +--------------------+-----------------+
+
+Training commands (check for the *'Training time: XXX seconds'* line in the terminal output):
+
+.. code:: bash
+
+    python scripts/reinforcement_learning/rl_games/train.py --task Isaac-Humanoid-v0 --max_iterations 500 --headless
+    python scripts/reinforcement_learning/skrl/train.py --task Isaac-Humanoid-v0 --max_iterations 500 --headless
+    python scripts/reinforcement_learning/rsl_rl/train.py --task Isaac-Humanoid-v0 --max_iterations 500 --headless
+    python scripts/reinforcement_learning/sb3/train.py --task Isaac-Humanoid-v0 --max_iterations 500 --headless

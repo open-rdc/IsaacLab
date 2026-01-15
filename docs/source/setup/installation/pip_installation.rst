@@ -1,317 +1,107 @@
-.. _isaacsim-pip-installation:
+.. _isaaclab-pip-installation:
 
-Installation using Isaac Sim pip
-================================
+Installation using Isaac Sim Pip Package
+========================================
+
+The following steps first installs Isaac Sim from pip, then Isaac Lab from source code.
+
+.. attention::
+
+   Installing Isaac Sim with pip requires GLIBC 2.35+ version compatibility.
+   To check the GLIBC version on your system, use command ``ldd --version``.
+
+   This may pose compatibility issues with some Linux distributions. For instance, Ubuntu 20.04 LTS
+   has GLIBC 2.31 by default. If you encounter compatibility issues, we recommend following the
+   :ref:`Isaac Sim Binaries Installation <isaaclab-binaries-installation>` approach.
 
 .. note::
 
-   If you use Conda, we recommend using `Miniconda <https://docs.anaconda.com/miniconda/miniconda-other-installer-links/>`_.
+   If you plan to :ref:`Set up Visual Studio Code <setup-vs-code>` later, we recommend following the
+   :ref:`Isaac Sim Binaries Installation <isaaclab-binaries-installation>` approach.
 
 Installing Isaac Sim
 --------------------
 
-From Isaac Sim 4.0 release, it is possible to install Isaac Sim using pip. This approach is experimental and may have
-compatibility issues with some Linux distributions. If you encounter any issues, please report them to the
-`Isaac Sim Forums <https://docs.omniverse.nvidia.com/isaacsim/latest/common/feedback.html>`_.
+From Isaac Sim 4.0 onwards, it is possible to install Isaac Sim using pip.
+This approach makes it easier to install Isaac Sim without requiring to download the Isaac Sim binaries.
+If you encounter any issues, please report them to the
+`Isaac Sim Forums <https://docs.isaacsim.omniverse.nvidia.com/latest/common/feedback.html>`_.
 
 .. attention::
 
-   Installing Isaac Sim with pip requires GLIBC 2.34+ version compatibility.
-   To check the GLIBC version on your system, use command ``ldd --version``.
+   On Windows, it may be necessary to `enable long path support <https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=registry#enable-long-paths-in-windows-10-version-1607-and-later>`_
+   to avoid installation errors due to OS limitations.
 
-   This may pose compatibility issues with some Linux distributions. For instance, Ubuntu 20.04 LTS has GLIBC 2.31
-   by default. If you encounter compatibility issues, we recommend following the
-   :ref:`Isaac Sim Binaries Installation <isaacsim-binaries-installation>` approach.
+.. include:: include/pip_python_virtual_env.rst
 
-.. attention::
+Installing dependencies
+~~~~~~~~~~~~~~~~~~~~~~~
 
-      On Windows with CUDA 12, the GPU driver version 552.86 is required.
+.. note::
 
--  To use the pip installation approach for Isaac Sim, we recommend first creating a virtual environment.
-   Ensure that the python version of the virtual environment is **Python 3.10**.
+   In case you used UV to create your virtual environment, please replace ``pip`` with ``uv pip``
+   in the following commands.
+
+-  Install Isaac Sim pip packages:
+
+   .. code-block:: none
+
+      pip install "isaacsim[all,extscache]==5.1.0" --extra-index-url https://pypi.nvidia.com
+
+-  Install a CUDA-enabled PyTorch build that matches your system architecture:
 
    .. tab-set::
+      :sync-group: pip-platform
 
-      .. tab-item:: conda environment
-
-         .. code-block:: bash
-
-            conda create -n isaaclab python=3.10
-            conda activate isaaclab
-
-      .. tab-item:: venv environment
-
-         .. tab-set::
-            :sync-group: os
-
-            .. tab-item:: :icon:`fa-brands fa-linux` Linux
-               :sync: linux
-
-               .. code-block:: bash
-
-                  # create a virtual environment named isaaclab with python3.10
-                  python3.10 -m venv isaaclab
-                  # activate the virtual environment
-                  source isaaclab/bin/activate
-
-            .. tab-item:: :icon:`fa-brands fa-windows` Windows
-               :sync: windows
-
-               .. code-block:: batch
-
-                  # create a virtual environment named isaaclab with python3.10
-                  python3.10 -m venv isaaclab
-                  # activate the virtual environment
-                  isaaclab\Scripts\activate
-
-
--  Next, install a CUDA-enabled PyTorch 2.4.0 build based on the CUDA version available on your system. This step is optional for Linux, but required for Windows to ensure a CUDA-compatible version of PyTorch is installed.
-
-   .. tab-set::
-
-      .. tab-item:: CUDA 11
+      .. tab-item:: :icon:`fa-brands fa-linux` Linux (x86_64)
+         :sync: linux-x86_64
 
          .. code-block:: bash
 
-            pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu118
+            pip install -U torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
 
-      .. tab-item:: CUDA 12
+      .. tab-item:: :icon:`fa-brands fa-windows` Windows (x86_64)
+         :sync: windows-x86_64
 
          .. code-block:: bash
 
-            pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+            pip install -U torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
 
--  Before installing Isaac Sim, ensure the latest pip version is installed. To update pip, run
+      .. tab-item:: :icon:`fa-brands fa-linux` Linux (aarch64)
+         :sync: linux-aarch64
 
-   .. code-block:: bash
+         .. code-block:: bash
 
-      pip install --upgrade pip
+            pip install -U torch==2.9.0 torchvision==0.24.0 --index-url https://download.pytorch.org/whl/cu130
 
+         .. note::
 
--  Then, install the Isaac Sim packages necessary for running Isaac Lab:
+            After installing Isaac Lab on aarch64, you may encounter warnings such as:
 
-   .. code-block:: bash
+            .. code-block:: none
 
-      pip install isaacsim-rl isaacsim-replicator isaacsim-extscache-physics isaacsim-extscache-kit-sdk isaacsim-extscache-kit isaacsim-app --extra-index-url https://pypi.nvidia.com
+               ERROR: ld.so: object '...torch.libs/libgomp-XXXX.so.1.0.0' cannot be preloaded: ignored.
 
+            This occurs when both the system and PyTorch ``libgomp`` (GNU OpenMP) libraries are preloaded.
+            Isaac Sim expects the **system** OpenMP runtime, while PyTorch sometimes bundles its own.
 
-Verifying the Isaac Sim installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            To fix this, unset any existing ``LD_PRELOAD`` and set it to use the system library only:
 
--  Make sure that your virtual environment is activated (if applicable)
+            .. code-block:: bash
 
+               unset LD_PRELOAD
+               export LD_PRELOAD="$LD_PRELOAD:/lib/aarch64-linux-gnu/libgomp.so.1"
 
--  Check that the simulator runs as expected:
+            This ensures the correct ``libgomp`` library is preloaded for both Isaac Sim and Isaac Lab,
+            removing the preload warnings during runtime.
 
-   .. code:: bash
-
-      # note: you can pass the argument "--help" to see all arguments possible.
-      isaacsim
-
-   By default, this will launch an empty mini Kit window.
-
--  To run with a specific experience file, run:
-
-   .. code:: bash
-
-      # experience files can be absolute path, or relative path searched in isaacsim/apps or omni/apps
-      isaacsim omni.isaac.sim.python.kit
-
-
-.. attention::
-
-   When running Isaac Sim for the first time, all dependent extensions will be pulled from the registry.
-   This process can take upwards of 10 minutes and is required on the first run of each experience file.
-   Once the extensions are pulled, consecutive runs using the same experience file will use the cached extensions.
-
-   In addition, the first run will prompt users to accept the Nvidia Omniverse License Agreement.
-   To accept the EULA, reply ``Yes`` when prompted with the below message:
-
-   .. code:: bash
-
-      By installing or using Isaac Sim, I agree to the terms of NVIDIA OMNIVERSE LICENSE AGREEMENT (EULA)
-      in https://docs.omniverse.nvidia.com/isaacsim/latest/common/NVIDIA_Omniverse_License_Agreement.html
-
-      Do you accept the EULA? (Yes/No): Yes
-
-
-If the simulator does not run or crashes while following the above
-instructions, it means that something is incorrectly configured. To
-debug and troubleshoot, please check Isaac Sim
-`documentation <https://docs.omniverse.nvidia.com/dev-guide/latest/linux-troubleshooting.html>`__
-and the
-`forums <https://docs.omniverse.nvidia.com/isaacsim/latest/isaac_sim_forums.html>`__.
-
-
+.. include:: include/pip_verify_isaacsim.rst
 
 Installing Isaac Lab
 --------------------
 
-Cloning Isaac Lab
-~~~~~~~~~~~~~~~~~
+.. include:: include/src_clone_isaaclab.rst
 
-.. note::
+.. include:: include/src_build_isaaclab.rst
 
-   We recommend making a `fork <https://github.com/isaac-sim/IsaacLab/fork>`_ of the Isaac Lab repository to contribute
-   to the project but this is not mandatory to use the framework. If you
-   make a fork, please replace ``isaac-sim`` with your username
-   in the following instructions.
-
-Clone the Isaac Lab repository into your workspace:
-
-.. tab-set::
-
-   .. tab-item:: SSH
-
-      .. code:: bash
-
-         git clone git@github.com:isaac-sim/IsaacLab.git
-
-   .. tab-item:: HTTPS
-
-      .. code:: bash
-
-         git clone https://github.com/isaac-sim/IsaacLab.git
-
-
-.. note::
-   We provide a helper executable `isaaclab.sh <https://github.com/isaac-sim/IsaacLab/blob/main/isaaclab.sh>`_ that provides
-   utilities to manage extensions:
-
-   .. tab-set::
-      :sync-group: os
-
-      .. tab-item:: :icon:`fa-brands fa-linux` Linux
-         :sync: linux
-
-         .. code:: text
-
-            ./isaaclab.sh --help
-
-            usage: isaaclab.sh [-h] [-i] [-f] [-p] [-s] [-t] [-o] [-v] [-d] [-c] -- Utility to manage Isaac Lab.
-
-            optional arguments:
-               -h, --help           Display the help content.
-               -i, --install [LIB]  Install the extensions inside Isaac Lab and learning frameworks (rl_games, rsl_rl, sb3, skrl) as extra dependencies. Default is 'all'.
-               -f, --format         Run pre-commit to format the code and check lints.
-               -p, --python         Run the python executable provided by Isaac Sim or virtual environment (if active).
-               -s, --sim            Run the simulator executable (isaac-sim.sh) provided by Isaac Sim.
-               -t, --test           Run all python unittest tests.
-               -o, --docker         Run the docker container helper script (docker/container.sh).
-               -v, --vscode         Generate the VSCode settings file from template.
-               -d, --docs           Build the documentation from source using sphinx.
-               -c, --conda [NAME]   Create the conda environment for Isaac Lab. Default name is 'isaaclab'.
-
-      .. tab-item:: :icon:`fa-brands fa-windows` Windows
-         :sync: windows
-
-         .. code:: text
-
-            isaaclab.bat --help
-
-            usage: isaaclab.bat [-h] [-i] [-f] [-p] [-s] [-v] [-d] [-c] -- Utility to manage Isaac Lab.
-
-            optional arguments:
-               -h, --help           Display the help content.
-               -i, --install [LIB]  Install the extensions inside Isaac Lab and learning frameworks (rl_games, rsl_rl, sb3, skrl) as extra dependencies. Default is 'all'.
-               -f, --format         Run pre-commit to format the code and check lints.
-               -p, --python         Run the python executable provided by Isaac Sim or virtual environment (if active).
-               -s, --sim            Run the simulator executable (isaac-sim.bat) provided by Isaac Sim.
-               -t, --test           Run all python unittest tests.
-               -v, --vscode         Generate the VSCode settings file from template.
-               -d, --docs           Build the documentation from source using sphinx.
-               -c, --conda [NAME]   Create the conda environment for Isaac Lab. Default name is 'isaaclab'.
-
-Installation
-~~~~~~~~~~~~
-
--  Install dependencies using ``apt`` (on Ubuntu):
-
-   .. code:: bash
-
-      sudo apt install cmake build-essential
-
-- Run the install command that iterates over all the extensions in ``source/extensions`` directory and installs them
-  using pip (with ``--editable`` flag):
-
-.. tab-set::
-   :sync-group: os
-
-   .. tab-item:: :icon:`fa-brands fa-linux` Linux
-      :sync: linux
-
-      .. code:: bash
-
-         ./isaaclab.sh --install # or "./isaaclab.sh -i"
-
-   .. tab-item:: :icon:`fa-brands fa-windows` Windows
-      :sync: windows
-
-      .. code:: bash
-
-         isaaclab.bat --install :: or "isaaclab.bat -i"
-
-.. note::
-
-   By default, this will install all the learning frameworks. If you want to install only a specific framework, you can
-   pass the name of the framework as an argument. For example, to install only the ``rl_games`` framework, you can run
-
-   .. tab-set::
-      :sync-group: os
-
-      .. tab-item:: :icon:`fa-brands fa-linux` Linux
-         :sync: linux
-
-         .. code:: bash
-
-            ./isaaclab.sh --install rl_games  # or "./isaaclab.sh -i rl_games"
-
-      .. tab-item:: :icon:`fa-brands fa-windows` Windows
-         :sync: windows
-
-         .. code:: bash
-
-            isaaclab.bat --install rl_games :: or "isaaclab.bat -i rl_games"
-
-   The valid options are ``rl_games``, ``rsl_rl``, ``sb3``, ``skrl``, ``robomimic``, ``none``.
-
-Verifying the Isaac Lab installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To verify that the installation was successful, run the following command from the
-top of the repository:
-
-.. tab-set::
-   :sync-group: os
-
-   .. tab-item:: :icon:`fa-brands fa-linux` Linux
-      :sync: linux
-
-      .. code:: bash
-
-         # Option 1: Using the isaaclab.sh executable
-         # note: this works for both the bundled python and the virtual environment
-         ./isaaclab.sh -p source/standalone/tutorials/00_sim/create_empty.py
-
-         # Option 2: Using python in your virtual environment
-         python source/standalone/tutorials/00_sim/create_empty.py
-
-   .. tab-item:: :icon:`fa-brands fa-windows` Windows
-      :sync: windows
-
-      .. code:: batch
-
-         :: Option 1: Using the isaaclab.bat executable
-         :: note: this works for both the bundled python and the virtual environment
-         isaaclab.bat -p source\standalone\tutorials\00_sim\create_empty.py
-
-         :: Option 2: Using python in your virtual environment
-         python source\standalone\tutorials\00_sim\create_empty.py
-
-
-The above command should launch the simulator and display a window with a black
-ground plane. You can exit the script by pressing ``Ctrl+C`` on your terminal.
-On Windows machines, please terminate the process from Command Prompt using
-``Ctrl+Break`` or ``Ctrl+fn+B``.
-
-If you see this, then the installation was successful! |:tada:|
+.. include:: include/src_verify_isaaclab.rst
